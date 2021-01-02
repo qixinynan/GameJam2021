@@ -23,8 +23,13 @@
           </e>
         </e>
         <e p="Common" t="Include">
+          <e p="BackgroundParallax.cs" t="Include" />
           <e p="DataManager.cs" t="Include" />
+          <e p="ObjectPool.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="UIKeyManager.cs" t="Include" />
+          <e p="Util.cs" t="Include" />
         </e>
         <e p="DialogBox" t="Include">
           <e p="Script" t="Include">

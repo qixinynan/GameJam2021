@@ -1,0 +1,55 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public static class GameObjectExtension {
+    public static void SetActiveFast(this GameObject go, bool active) {
+        if (go.activeInHierarchy != active)
+            go.SetActive(active);
+    }
+}
+
+public static class Util
+{
+
+    // data
+    public static Dictionary<string, int> objectInitCountDict = new Dictionary<string, int>
+    {
+        {ObjectItemNameCollection.demo, 10}
+    };
+
+    //type
+    public delegate void NoParmsCallBack();
+    public delegate bool BoolParmsCallBack();
+    
+    public static class ObjectItemNameCollection
+    {
+        public static string demo = "demo";
+    }
+
+    // function
+    public static System.Collections.IEnumerator DelayExecute(float time, NoParmsCallBack callback)
+    {
+        yield return new WaitForSecondsRealtime(time);
+        callback?.Invoke();
+    }
+
+    public static System.Collections.IEnumerator DelayExecute(BoolParmsCallBack preFunc, NoParmsCallBack callback)
+    {
+        yield return new WaitUntil(() => { return preFunc(); });
+        callback?.Invoke();
+    }
+
+    public static Color ColorFromString(string s, float a)
+    {
+        int R = int.Parse(s.Substring(1, 2),
+            System.Globalization.NumberStyles.HexNumber);
+        int G = int.Parse(s.Substring(3, 2),
+            System.Globalization.NumberStyles.HexNumber);
+        int B = int.Parse(s.Substring(5, 2),
+            System.Globalization.NumberStyles.HexNumber);
+        return new Color(R / 255f, G / 255f, B / 255f, a);
+    }
+}
