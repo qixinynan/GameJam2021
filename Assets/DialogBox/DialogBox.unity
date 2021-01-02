@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 15364793}
   - component: {fileID: 15364792}
   m_Layer: 5
-  m_Name: NextButton
+  m_Name: NextBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -400,7 +401,7 @@ GameObject:
   - component: {fileID: 1093504257}
   - component: {fileID: 1093504256}
   m_Layer: 5
-  m_Name: Name
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -440,6 +441,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -482,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1335120451
 RectTransform:
   m_ObjectHideFlags: 0
@@ -521,6 +523,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -594,6 +597,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -631,7 +635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1527750090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -664,11 +668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc9d0880148b804a85d748675e6be8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogPanel: {fileID: 1335120450}
-  textBox: {fileID: 1897002068}
-  nameTextBox: {fileID: 1093504256}
-  faceImageBox: {fileID: 1425298553}
-  nextButton: {fileID: 15364792}
+  showText: {fileID: 0}
+  nameText: {fileID: 0}
+  faceImage: {fileID: 0}
+  nextBtn: {fileID: 0}
 --- !u!1 &1726974494
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +724,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -949,7 +953,7 @@ GameObject:
   - component: {fileID: 1897002069}
   - component: {fileID: 1897002068}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ShowText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,6 +993,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

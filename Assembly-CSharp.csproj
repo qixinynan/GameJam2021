@@ -69,8 +69,9 @@
      <Compile Include="Assets\3rd\LitJson\ParserToken.cs" />
      <Compile Include="Assets\3rd\Notification\CustomTinyMsg.cs" />
      <Compile Include="Assets\3rd\Notification\TinyMessenger.cs" />
+     <Compile Include="Assets\Common\DataManager.cs" />
+     <Compile Include="Assets\Common\Singleton.cs" />
      <Compile Include="Assets\DialogBox\Script\DialogBoxPenel.cs" />
-     <Compile Include="Assets\Manager\DataManager.cs" />
      <None Include="Assets\3rd\Notification\使用方法.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

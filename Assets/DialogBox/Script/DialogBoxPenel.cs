@@ -6,11 +6,10 @@ using UnityEngine.UI;
 
 public class DialogBoxPenel : MonoBehaviour
 {
-    public GameObject DialogPanel;
-    public Text textBox;
-    public Text nameTextBox;
-    public Image faceImageBox;
-    public Button nextButton;
+    public Text showText;
+    public Text nameText;
+    public Image faceImage;
+    public Button nextBtn;
 
     public List<DialogData> dialogData_List = new List<DialogData>();
 
@@ -21,52 +20,28 @@ public class DialogBoxPenel : MonoBehaviour
         ShowDialog("Hello1", "Name2", null);   
         ShowDialog("Hello4", "Name3", null);   
     }
-    void Update()
-    {
-        
-    }
 
     void Init()
     {
-        nextButton.onClick.AddListener(NextText);
-    }
-
-    void SetDialogData(string _text, string _name, Sprite _faceImage)
-    {
-        textBox.text = _text;
-        nameTextBox.text = _name;
-        faceImageBox.sprite = _faceImage;
-    }
-
-    void NextText()
-    {
-        if(dialogData_List.Count == 0)
-        {
-            DialogPanel.SetActive(false);
-        }
-        else
+        nextBtn.onClick.AddListener(() =>
         {
             DialogData data = dialogData_List[0];
             SetDialogData(data.text,data.name,data.faceImage);
             dialogData_List.RemoveAt(0);
-        }
+        });
+    }
+
+    void SetDialogData(string _text, string _name, Sprite _faceImage)
+    {
+        showText.text = _text;
+        nameText.text = _name;
+        faceImage.sprite = _faceImage;
     }
 
     public void ShowDialog(string _text,string _name,Sprite _faceImage)
     {
-
-        if (DialogPanel.activeSelf)
-        {
-            DialogData dialogData = new DialogData(_text, _name, _faceImage);
-            dialogData_List.Add(dialogData);
-        }
-        else
-        {
-            
-            DialogPanel.SetActive(true);
-            SetDialogData(_text, _name, _faceImage);
-        }
-
+        gameObject.SetActive(true);
+        SetDialogData(_text, _name, _faceImage);
     }
 }
 

@@ -22,13 +22,14 @@
             <e p="使用方法.txt" t="Include" />
           </e>
         </e>
+        <e p="Common" t="Include">
+          <e p="DataManager.cs" t="Include" />
+          <e p="Singleton.cs" t="Include" />
+        </e>
         <e p="DialogBox" t="Include">
           <e p="Script" t="Include">
             <e p="DialogBoxPenel.cs" t="Include" />
           </e>
-        </e>
-        <e p="Manager" t="Include">
-          <e p="DataManager.cs" t="Include" />
         </e>
       </e>
       <e p="GameJamMould.sln" t="IncludeFlat" />
