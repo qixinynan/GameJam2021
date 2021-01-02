@@ -1,0 +1,22 @@
+1.在CustomTinyMsg中自定义消息
+public class WindBreakUIMessage : ITinyMessage {
+    public object Sender { get; private set; }
+    public WindBreakUIStatus curStatus;
+    public WindBreakUIMessage(WindBreakUIStatus status) {
+        curStatus = status;
+    }
+}
+2.在需要接受消息的地方进行订阅
+private TinyMessageSubscriptionToken token;
+private void Start() {
+    token = GameController.manager.messageHub.Subscribe<WindBreakUIMessage>((m) => {
+        powerGo.SetActiveFast(m.curStatus == WindBreakUIStatus.Show);
+    });
+}
+3.在界面的销毁函数中进行订阅的取消
+private void OnDestroy() {
+    GameController.manager.messageHub.Unsubscribe(token);
+}
+4.在需要发送消息的时候 发送对应的类型对象即可
+GameController.manager.messageHub.Publish(
+    new WindBreakUIMessage(WindBreakUIStatus.Close));
