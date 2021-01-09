@@ -668,10 +668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc9d0880148b804a85d748675e6be8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showText: {fileID: 0}
-  nameText: {fileID: 0}
-  faceImage: {fileID: 0}
-  nextBtn: {fileID: 0}
+  showText: {fileID: 1897002068}
+  nameText: {fileID: 1093504256}
+  faceImage: {fileID: 1425298553}
+  nextBtn: {fileID: 15364792}
 --- !u!1 &1726974494
 GameObject:
   m_ObjectHideFlags: 0

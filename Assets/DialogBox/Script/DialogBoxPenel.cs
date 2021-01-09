@@ -16,18 +16,22 @@ public class DialogBoxPenel : MonoBehaviour
     void Start()
     {
         Init();
-        ShowDialog("Hello", "Name", null);   
-        ShowDialog("Hello1", "Name2", null);   
-        ShowDialog("Hello4", "Name3", null);   
     }
 
     void Init()
     {
         nextBtn.onClick.AddListener(() =>
         {
-            DialogData data = dialogData_List[0];
-            SetDialogData(data.text,data.name,data.faceImage);
-            dialogData_List.RemoveAt(0);
+            if (dialogData_List.Count > 0)
+            {
+                DialogData data = dialogData_List[0];
+                SetDialogData(data.text, data.name, data.faceImage);
+                dialogData_List.RemoveAt(0);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         });
     }
 
@@ -40,8 +44,15 @@ public class DialogBoxPenel : MonoBehaviour
 
     public void ShowDialog(string _text,string _name,Sprite _faceImage)
     {
-        gameObject.SetActive(true);
-        SetDialogData(_text, _name, _faceImage);
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+            SetDialogData(_text, _name, _faceImage);
+        }
+        else
+        {
+            dialogData_List.Add(new DialogData(_text,_name,_faceImage));
+        }
     }
 }
 
