@@ -10,8 +10,8 @@
     "id": 1,
     "text": "brach 1",
     "name": "MyName1",
-    "faceImagePath": null
-    //"nextDialogID": [ 1, 2 ]
+    "faceImagePath": null,
+    "nextDialogID": null
   },
   {
     "id": 2,

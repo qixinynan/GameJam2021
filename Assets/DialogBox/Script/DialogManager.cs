@@ -8,10 +8,14 @@ public class DialogManager : MonoBehaviour
 {
     public DialogBoxPenel dialog;
     public string jsonPath;
+
+    //public List<DialogJsonData> dialogJsonData_List = new List<DialogJsonData>();
+    public Dictionary<int, DialogJsonData> dialogJsonData_Dic = new Dictionary<int, DialogJsonData>();
     // Start is called before the first frame update
     void Start()
     {
         init();
+        PlayDialog(0);
       //dialog.ShowDialog("Hello", "Name", null);
       //dialog.ShowDialog("Hello1", "Name2", null);
       //dialog.ShowDialog("Hello4", "Name3", null);
@@ -37,13 +41,45 @@ public class DialogManager : MonoBehaviour
                 string iconPath = item["faceImagePath"].ToString();
                 dialogJsonData.faceImage = Resources.Load<Sprite>(iconPath);
             }
-            dialogJsonData.nextDialogID = null; //TODO
-                            
-            Debug.Log(item["nextDialogID"].ToString());
+            dialogJsonData.nextDialogID = new List<int>(); //TODO
+            if (item["nextDialogID"] != null)
+            {
+                foreach (JsonData item1 in item["nextDialogID"])
+                {
+                    dialogJsonData.nextDialogID.Add((int)item1);
+                }
+                
+            }
+            dialogJsonData_Dic.Add(dialogJsonData.id,dialogJsonData);
         }
+
+        Debug.Log("对话数据加载完成，一共加载了"+ dialogJsonData_Dic.Count.ToString() + "个对话脚本");
         
-        
-        
+    }
+    public void PlayDialog(int id)
+    {
+        DialogJsonData jsonDialog = dialogJsonData_Dic[id];
+        dialog.ShowDialog(DialogJsonDataToDialogData(jsonDialog));
+        if(jsonDialog.nextDialogID.Count == 0)
+        {
+            return;
+        }
+        else if(jsonDialog.nextDialogID.Count >= 2)
+        {
+            //TODO
+            Debug.LogError("多分支对话还未完成,目前自动播放第一号对话");
+            PlayDialog(jsonDialog.nextDialogID[0]);
+        }
+        else
+        {
+            PlayDialog(jsonDialog.nextDialogID[0]);
+        }
+    }
+    public DialogData DialogJsonDataToDialogData(DialogJsonData jsonData)
+    {
+        DialogData data = new DialogData(jsonData.text,jsonData.name,jsonData.faceImage);
+        return data;
+
     }
 }
 

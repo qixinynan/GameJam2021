@@ -54,6 +54,18 @@ public class DialogBoxPenel : MonoBehaviour
             dialogData_List.Add(new DialogData(_text,_name,_faceImage));
         }
     }
+    public void ShowDialog(DialogData data)
+    {
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+            SetDialogData(data.text, data.name, data.faceImage);
+        }
+        else
+        {
+            dialogData_List.Add(data);
+        }
+    }
 }
 
 
