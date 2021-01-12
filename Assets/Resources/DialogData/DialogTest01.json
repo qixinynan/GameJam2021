@@ -1,24 +1,43 @@
 [
   {
     "id": 0,
-    "text": "Json",
-    "name": "MyName",
-    "faceImagePath": null,
-    "nextDialogID": [ 1, 2 ]
+    "text": "branch 0",
+    "name": "MyName0",
+    "faceImagePath": "",
+    "nextDialog": [
+      {
+        "text": "A",
+        "id": 1
+      },
+      {
+        "text": "B",
+        "id": 2
+      }
+    ]
   },
   {
     "id": 1,
-    "text": "brach 1",
+    "text": "branch 1",
     "name": "MyName1",
-    "faceImagePath": null,
-    "nextDialogID": null
+    "faceImagePath": "",
+    "nextDialog": [
+      {
+        "text": "Finish",
+        "id": -1
+      }
+    ]
   },
   {
     "id": 2,
-    "text": "brach 2",
+    "text": "branch 2",
     "name": "MyName2",
-    "faceImagePath": null,
-    "nextDialogID": [0]
+    "faceImagePath": "",
+    "nextDialog": [
+      {
+        "text": "Finish",
+        "id": -1
+      }
+    ]
   }
 
 ]

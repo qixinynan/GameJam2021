@@ -52,4 +52,19 @@ public static class Util
             System.Globalization.NumberStyles.HexNumber);
         return new Color(R / 255f, G / 255f, B / 255f, a);
     }
+    
+    public static void DeleteChildren(Transform t, int startIndex = 0)
+    {
+        var children = new List<Transform>();
+        for (var i = startIndex; i < t.childCount; i++)
+        {
+            children.Add(t.GetChild(i));
+        }
+
+        foreach (var child in children)
+        {
+            child.SetParent(null);
+            UnityEngine.Object.Destroy(child.gameObject);
+        }
+    }
 }

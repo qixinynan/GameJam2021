@@ -3,13 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Util.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogBox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogBox/DialogBox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogData.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogData/DialogTest01.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogData/DialogTest01.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPenel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPenel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DialogData/DialogTest01.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DialogData/DialogTest01.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,23 +27,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Common/UIKeyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd/Notification/CustomTinyMsg.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Common/BackgroundParallax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Common/Manager/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Common/Util.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Common/Manager/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Common/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Common/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DialogBox/Script/DialogSelectItem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Manager/DataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd/Notification/CustomTinyMsg.cs" />
-        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPenel.cs" />
         <option value="$PROJECT_DIR$/Assets/Common/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Common/Util.cs" />
         <option value="$PROJECT_DIR$/Assets/Common/ObjectPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Common/UIKeyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Common/Manager/GameContoller.cs" />
+        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPenel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Common/Manager/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogSelectItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Common/Util.cs" />
+        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/DialogData/DialogTest01.json" />
+        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogManager.cs" />
       </list>
     </option>
   </component>
@@ -88,6 +102,7 @@
       <updated>1609513750481</updated>
       <workItem from="1609513763517" duration="657000" />
       <workItem from="1609551591256" duration="1603000" />
+      <workItem from="1610457827320" duration="5805000" />
     </task>
     <servers />
   </component>
@@ -104,9 +119,9 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="201" y="52" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1609553007816" />
-    <state x="363" y="165" key="search.everywhere.popup" timestamp="1609552018871">
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1610463102124">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="363" y="165" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1609552018871" />
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1610463102124" />
   </component>
 </project>
