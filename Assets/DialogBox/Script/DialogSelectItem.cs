@@ -18,5 +18,6 @@ public class DialogSelectItem : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         UIManager.instance.dialogBoxPanel.ShowDialog(curInfo.id);
+        GameController.manager.dialogMan.CheckAndExecuteSelectionCallback(curInfo);
     }
 }

@@ -15,15 +15,20 @@ public class DialogInfo
 
 public class NextDialogInfo
 {
-    public string text;
+    public int dialogId;
     public int id;
+    public string text;
+    public int index;
 }
 
 public class DialogManager
 {
     public Dictionary<int, DialogInfo> dialogInfoDict = new Dictionary<int, DialogInfo>();
-    public DialogInfo currentInfo;
-    
+
+    // 第一个id是dialog的id 第二个id是每个选项的index 不能大于总的选项数量
+    public Dictionary<int, Dictionary<int, Util.NoParmsCallBack>> selectionCallbackDict =
+        new Dictionary<int, Dictionary<int, Util.NoParmsCallBack>>();
+
     public void ParseDialogInfo()
     {
         JsonData jsonData = JsonMapper.ToObject(Resources.Load<TextAsset>("DialogData/DialogTest01").text);
@@ -44,17 +49,58 @@ public class DialogManager
             var nextDialogData = item["nextDialog"];
             if (nextDialogData.Count > 0)
             {
-                foreach (JsonData item1 in nextDialogData)
+                for (int i = 0; i < nextDialogData.Count; i++)
                 {
                     NextDialogInfo dialogToIndex = new NextDialogInfo();
-                    dialogToIndex.text = (string) item1["text"];
-                    dialogToIndex.id = (int) item1["id"];
+                    dialogToIndex.dialogId = dialogInfo.id;
+                    dialogToIndex.text = (string) nextDialogData[i]["text"];
+                    dialogToIndex.id = (int) nextDialogData[i]["id"];
+                    dialogToIndex.index = i;
                     dialogInfo.nextDialogList.Add(dialogToIndex);
                 }
             }
+
             dialogInfoDict.Add(dialogInfo.id, dialogInfo);
         }
 
         Debug.Log("对话数据加载完成，一共加载了"+ dialogInfoDict.Count.ToString() + "个对话脚本");
+    }
+
+    public void RegisterSelectionCallback(int dialogId, int nextIndex, Util.NoParmsCallBack callback)
+    {
+        if (!dialogInfoDict.ContainsKey(dialogId))
+        {
+            Debug.LogError("Don't Exist id : " + dialogId);
+            return;
+        }
+
+        if (nextIndex >= dialogInfoDict[dialogId].nextDialogList.Count || nextIndex < 0)
+        {
+            Debug.LogError("nextIndex is invalid");
+            return;
+        }
+
+        if (!selectionCallbackDict.ContainsKey(dialogId))
+        {
+            selectionCallbackDict[dialogId] = new Dictionary<int, Util.NoParmsCallBack>();
+        }
+
+        selectionCallbackDict[dialogId][nextIndex] = callback;
+    }
+
+    public void CheckAndExecuteSelectionCallback(NextDialogInfo info)
+    {
+        if (!selectionCallbackDict.ContainsKey(info.dialogId))
+        {
+            Debug.LogError("no callback with id : " + info.dialogId);
+            return;
+        }
+
+        if (!selectionCallbackDict[info.dialogId].ContainsKey(info.index))
+        {
+            Debug.LogError("Error index :  " + info.index);
+            return;
+        }
+        selectionCallbackDict[info.dialogId][info.index]?.Invoke();
     }
 }

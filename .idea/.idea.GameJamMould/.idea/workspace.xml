@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogBox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogBox/DialogBox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogData.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogData/DialogTest01.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/DialogData/DialogTest01.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPenel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPenel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DialogData/DialogTest01.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DialogData/DialogTest01.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogSelectItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogBox/Script/DialogSelectItem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +35,10 @@
         <option value="$PROJECT_DIR$/Assets/Common/Manager/GameContoller.cs" />
         <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPenel.cs" />
         <option value="$PROJECT_DIR$/Assets/Common/Manager/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogSelectItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Common/Util.cs" />
-        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/DialogData/DialogTest01.json" />
+        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogSelectItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogBoxPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/DialogBox/Script/DialogManager.cs" />
       </list>
     </option>
@@ -102,7 +91,8 @@
       <updated>1609513750481</updated>
       <workItem from="1609513763517" duration="657000" />
       <workItem from="1609551591256" duration="1603000" />
-      <workItem from="1610457827320" duration="5805000" />
+      <workItem from="1610457827320" duration="5872000" />
+      <workItem from="1610505758022" duration="3331000" />
     </task>
     <servers />
   </component>
@@ -119,9 +109,9 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="201" y="52" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1609553007816" />
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1610463102124">
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1610509883531">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1610463102124" />
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1610509883531" />
   </component>
 </project>

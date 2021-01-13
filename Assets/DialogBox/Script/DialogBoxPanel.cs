@@ -16,6 +16,14 @@ public class DialogBoxPanel : MonoBehaviour
 
     private void Start()
     {
+        GameController.manager.dialogMan.RegisterSelectionCallback(0, 0, () =>
+        {
+            Debug.LogError("66666");
+        });
+        GameController.manager.dialogMan.RegisterSelectionCallback(0, 1, () =>
+        {
+            Debug.LogError("88888");
+        });
         ShowDialog(0);
     }
 
