@@ -69,20 +69,25 @@
      <Compile Include="Assets\3rd\LitJson\ParserToken.cs" />
      <Compile Include="Assets\3rd\Notification\CustomTinyMsg.cs" />
      <Compile Include="Assets\3rd\Notification\TinyMessenger.cs" />
-     <Compile Include="Assets\Common\BackgroundParallax.cs" />
-     <Compile Include="Assets\Common\Manager\DataManager.cs" />
-     <Compile Include="Assets\Common\Manager\GameController.cs" />
-     <Compile Include="Assets\Common\Manager\SoundManager.cs" />
-     <Compile Include="Assets\Common\Manager\UIKeyManager.cs" />
-     <Compile Include="Assets\Common\Manager\UIManager.cs" />
-     <Compile Include="Assets\Common\ObjectPool\ObjectPool.cs" />
-     <Compile Include="Assets\Common\ObjectPool\ObjectPoolItem.cs" />
-     <Compile Include="Assets\Common\Singleton.cs" />
-     <Compile Include="Assets\Common\Util.cs" />
-     <Compile Include="Assets\DialogBox\Script\DialogBoxPanel.cs" />
-     <Compile Include="Assets\DialogBox\Script\DialogManager.cs" />
-     <Compile Include="Assets\DialogBox\Script\DialogSelectItem.cs" />
+     <Compile Include="Assets\Tool\Common\BackgroundParallax.cs" />
+     <Compile Include="Assets\Tool\Common\Manager\DataManager.cs" />
+     <Compile Include="Assets\Tool\Common\Manager\GameController.cs" />
+     <Compile Include="Assets\Tool\Common\Manager\SoundManager.cs" />
+     <Compile Include="Assets\Tool\Common\Manager\UIKeyManager.cs" />
+     <Compile Include="Assets\Tool\Common\Manager\UIManager.cs" />
+     <Compile Include="Assets\Tool\Common\ObjectPool\ObjectPool.cs" />
+     <Compile Include="Assets\Tool\Common\ObjectPool\ObjectPoolItem.cs" />
+     <Compile Include="Assets\Tool\Common\Singleton.cs" />
+     <Compile Include="Assets\Tool\Common\Util.cs" />
+     <Compile Include="Assets\Tool\DialogBox\Script\DialogBoxPanel.cs" />
+     <Compile Include="Assets\Tool\DialogBox\Script\DialogManager.cs" />
+     <Compile Include="Assets\Tool\DialogBox\Script\DialogSelectItem.cs" />
+     <Compile Include="Assets\Tool\Movement\Player.cs" />
+     <Compile Include="Assets\Tool\Movement\PlayerDash.cs" />
+     <None Include="Assets\3rd\DOTween\DOTween43.xml" />
+     <None Include="Assets\3rd\DOTween\DOTween50.xml" />
      <None Include="Assets\3rd\Notification\使用方法.txt" />
+     <None Include="Assets\3rd\DOTween\DOTween46.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -109,6 +114,15 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.14f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -286,6 +300,18 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.14f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Assets/3rd/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Assets/3rd/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Assets/3rd/DOTween/DOTween50.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Assets/3rd/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>

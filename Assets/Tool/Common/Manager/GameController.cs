@@ -7,6 +7,9 @@ public class GameController : MonoBehaviour
 {
     public static GameController manager = null;
     public DialogManager dialogMan = new DialogManager();
+
+    public bool disableInput = false;
+    
     private void Awake()
     {
         if (manager == null)
