@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController manager = null;
     public DialogManager dialogMan = new DialogManager();
+    public TaskManager taskMan = new TaskManager();
 
     public bool disableInput = false;
     
@@ -26,5 +27,6 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         dialogMan.ParseDialogInfo();
+        taskMan.ParseTaskInfo();
     }
 }

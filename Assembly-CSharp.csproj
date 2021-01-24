@@ -84,12 +84,17 @@
      <Compile Include="Assets\Tool\DialogBox\Script\DialogSelectItem.cs" />
      <Compile Include="Assets\Tool\Movement\Player.cs" />
      <Compile Include="Assets\Tool\Movement\PlayerDash.cs" />
+     <Compile Include="Assets\Tool\Task\TaskManager.cs" />
+     <Compile Include="Assets\Tool\Task\TaskUI.cs" />
      <None Include="Assets\3rd\DOTween\DOTween43.xml" />
      <None Include="Assets\3rd\DOTween\DOTween50.xml" />
      <None Include="Assets\3rd\Notification\使用方法.txt" />
      <None Include="Assets\3rd\DOTween\DOTween46.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
@@ -109,20 +114,17 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.14f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
