@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +36,8 @@
         <option value="$PROJECT_DIR$/Assets/Tool/Movement/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/TaskData/TaskInfo.json" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tool/Task/TaskManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Task/TaskUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tool/Task/TaskManager.cs" />
       </list>
     </option>
   </component>
@@ -99,7 +93,7 @@
       <workItem from="1610505758022" duration="3748000" />
       <workItem from="1611145692516" duration="1714000" />
       <workItem from="1611414111731" duration="96000" />
-      <workItem from="1611472438155" duration="1658000" />
+      <workItem from="1611472438155" duration="2075000" />
     </task>
     <servers />
   </component>
