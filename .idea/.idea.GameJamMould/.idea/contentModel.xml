@@ -27,9 +27,28 @@
             <e p="使用方法.txt" t="Include" />
           </e>
         </e>
+        <e p="Anim" t="Include">
+          <e p="PlaceHolder.txt" t="Include" />
+        </e>
         <e p="Editor" t="Include">
           <e p="PlaceholderTests.cs" t="Include" />
           <e p="Unity.2D.Tilemap.Extras.EditorTests.asmdef" t="Include" />
+        </e>
+        <e p="Font" t="Include">
+          <e p="PlaceHolder.txt" t="Include" />
+        </e>
+        <e p="Prefab" t="Include">
+          <e p="PlaceHolder.txt" t="Include" />
+        </e>
+        <e p="Scene" t="Include">
+          <e p="PlaceHolder.txt" t="Include" />
+        </e>
+        <e p="Script" t="Include">
+          <e p="PlaceHolder.txt" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+        </e>
+        <e p="Sound" t="Include">
+          <e p="PlaceHolder.txt" t="Include" />
         </e>
         <e p="Tool" t="Include">
           <e p="Common" t="Include">

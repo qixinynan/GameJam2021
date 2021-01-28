@@ -69,6 +69,8 @@
      <Compile Include="Assets\3rd\LitJson\ParserToken.cs" />
      <Compile Include="Assets\3rd\Notification\CustomTinyMsg.cs" />
      <Compile Include="Assets\3rd\Notification\TinyMessenger.cs" />
+     <Compile Include="Assets\Script\PlayerMovement.cs" />
+     <Compile Include="Assets\Script\StopPos.cs" />
      <Compile Include="Assets\Tool\Common\BackgroundParallax.cs" />
      <Compile Include="Assets\Tool\Common\Manager\DataManager.cs" />
      <Compile Include="Assets\Tool\Common\Manager\GameController.cs" />
@@ -87,9 +89,15 @@
      <Compile Include="Assets\Tool\Task\TaskManager.cs" />
      <Compile Include="Assets\Tool\Task\TaskUI.cs" />
      <None Include="Assets\3rd\DOTween\DOTween43.xml" />
+     <None Include="Assets\Sound\PlaceHolder.txt" />
+     <None Include="Assets\Font\PlaceHolder.txt" />
+     <None Include="Assets\Prefab\PlaceHolder.txt" />
      <None Include="Assets\3rd\DOTween\DOTween50.xml" />
      <None Include="Assets\3rd\Notification\使用方法.txt" />
+     <None Include="Assets\Script\PlaceHolder.txt" />
      <None Include="Assets\3rd\DOTween\DOTween46.xml" />
+     <None Include="Assets\Anim\PlaceHolder.txt" />
+     <None Include="Assets\Scene\PlaceHolder.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -125,6 +133,9 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/Users/magene/Desktop/GameJamMould/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.14f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
