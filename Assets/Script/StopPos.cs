@@ -8,7 +8,7 @@ public class StopPos : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log(other.gameObject.name);
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(Util.TagCollection.player))
         {
             PlayerMovement.instance.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }

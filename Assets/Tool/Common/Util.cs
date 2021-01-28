@@ -28,6 +28,12 @@ public static class Util
     {
         public static string demo = "demo";
     }
+    
+    public static class TagCollection
+    {
+        public static string player = "Player";
+        public static string stopPos = "StopPos";
+    }
 
     // function
     public static System.Collections.IEnumerator DelayExecute(float time, NoParmsCallBack callback)
