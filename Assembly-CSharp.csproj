@@ -76,6 +76,7 @@
      <Compile Include="Assets\Navigation2D\TestScene\Move.cs" />
      <Compile Include="Assets\Navigation2D\TestScene\MoveUpDown.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
+     <Compile Include="Assets\Script\PlayerTouch.cs" />
      <Compile Include="Assets\Script\StopPos.cs" />
      <Compile Include="Assets\Tool\Common\BackgroundParallax.cs" />
      <Compile Include="Assets\Tool\Common\Manager\DataManager.cs" />
