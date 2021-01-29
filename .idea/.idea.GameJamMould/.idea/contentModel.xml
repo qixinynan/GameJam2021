@@ -63,6 +63,7 @@
         <e p="Script" t="Include">
           <e p="Item" t="Include">
             <e p="ControlDoorItem.cs" t="Include" />
+            <e p="FXPlayerItem.cs" t="Include" />
             <e p="NormalDoorItem.cs" t="Include" />
             <e p="StopPos.cs" t="Include" />
           </e>
