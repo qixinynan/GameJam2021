@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="3rd" t="Include">
@@ -37,6 +38,22 @@
         <e p="Font" t="Include">
           <e p="PlaceHolder.txt" t="Include" />
         </e>
+        <e p="Navigation2D" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Navigation2D.cs" t="Include" />
+            <e p="Triangulation.cs" t="Include" />
+          </e>
+          <e p="Plugins" t="Include">
+            <e p="NavMeshAgent2D.cs" t="Include" />
+            <e p="NavMeshObstacle2D.cs" t="Include" />
+            <e p="NavMeshPath2D.cs" t="Include" />
+            <e p="NavMeshUtils2D.cs" t="Include" />
+          </e>
+          <e p="TestScene" t="Include">
+            <e p="Move.cs" t="Include" />
+            <e p="MoveUpDown.cs" t="Include" />
+          </e>
+        </e>
         <e p="Prefab" t="Include">
           <e p="PlaceHolder.txt" t="Include" />
         </e>
@@ -44,8 +61,21 @@
           <e p="PlaceHolder.txt" t="Include" />
         </e>
         <e p="Script" t="Include">
+          <e p="Item" t="Include">
+            <e p="ControlDoorItem.cs" t="Include" />
+            <e p="FXPlayerItem.cs" t="Include" />
+            <e p="NormalDoorItem.cs" t="Include" />
+            <e p="StopPos.cs" t="Include" />
+          </e>
+          <e p="Manager" t="Include">
+            <e p="DoorMan.cs" t="Include" />
+          </e>
           <e p="PlaceHolder.txt" t="Include" />
-          <e p="PlayerMovement.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="BossMovement.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerTouch.cs" t="Include" />
+          </e>
         </e>
         <e p="Sound" t="Include">
           <e p="PlaceHolder.txt" t="Include" />
