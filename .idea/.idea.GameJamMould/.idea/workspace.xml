@@ -5,42 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJamPreparation/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJamPreparation/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJamPreparation/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJamPreparation/.idea/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJamPreparation/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Light2D/2D Light Render.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Light2D/2D Light Render.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Light2D/Light2D.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Light2D/Light2D.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Light2D/Light2D_Renderer.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Light2D/Light2D_Renderer.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Item/FXPlayerItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Item/FXPlayerItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Texture/Media.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Texture/Media/Snow Tex.renderTexture" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Texture/Media/Snow Tex.renderTexture.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Texture/Media/Snow.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Texture/Media/Snow.mp4.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Light2D.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Empty/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Empty/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameJamPreparation.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GameJamPreparation.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Empty.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Empty/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Empty/NavMesh.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +120,7 @@
       <workItem from="1611414111731" duration="96000" />
       <workItem from="1611472438155" duration="2478000" />
       <workItem from="1611831450415" duration="5298000" />
-      <workItem from="1611917737056" duration="9814000" />
+      <workItem from="1611917737056" duration="10295000" />
     </task>
     <servers />
   </component>
