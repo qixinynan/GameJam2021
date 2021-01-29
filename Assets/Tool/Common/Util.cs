@@ -33,6 +33,7 @@ public static class Util
     {
         public static string player = "Player";
         public static string stopPos = "StopPos";
+        public static string door = "Door";
     }
 
     // function

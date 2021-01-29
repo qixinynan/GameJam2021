@@ -10,7 +10,7 @@ public class StopPos : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag(Util.TagCollection.player))
         {
-            PlayerMovement.instance.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GameController.manager.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
 }

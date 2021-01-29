@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject player;
     public float speed;
     public static PlayerMovement instance;
     private Vector3 clickPos;
@@ -41,11 +40,13 @@ public class PlayerMovement : MonoBehaviour
             
 
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            clickPos.z = player.transform.position.z;
-            player.GetComponent<NavMeshAgent2D>().destination = clickPos;
+            clickPos.z = GameController.manager.player.transform.position.z;
+            GameController.manager.player.GetComponent<NavMeshAgent2D>().destination = clickPos;
             //player.GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(clickPos - player.transform.position) * speed;
             //isMoving = true;
         }
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
 
         // if (Vector3.Distance(player.transform.position, clickPos) <= 0.1f && isMoving)
         // {

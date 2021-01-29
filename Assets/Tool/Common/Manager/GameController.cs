@@ -8,8 +8,10 @@ public class GameController : MonoBehaviour
     public static GameController manager = null;
     public DialogManager dialogMan = new DialogManager();
     public TaskManager taskMan = new TaskManager();
+    public DoorMan doorMan = new DoorMan();
 
     public bool disableInput = false;
+    public GameObject player;
     
     private void Awake()
     {
@@ -28,5 +30,6 @@ public class GameController : MonoBehaviour
     {
         dialogMan.ParseDialogInfo();
         taskMan.ParseTaskInfo();
+        doorMan.ParseDoorInfos();
     }
 }
