@@ -24,32 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Boy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Boy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/BoySleepIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/BoySleepIdle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Girl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Girl.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/GirlSleepIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/GirlSleepIdle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/ControlDoor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Door/ControlDoor.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/NormalDoor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Door/NormalDoor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Boy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Boy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/controlDoors.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DoorData/controlDoors.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/ControlDoorItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/ControlDoorItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/NormalDoorItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/NormalDoorItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/StopPos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/StopPos.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/BossMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/BossMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Scene/图层 39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Scene/图层 39.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/DialogBox/Script/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/DialogBox/Script/DialogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,13 +80,13 @@
         <option value="$PROJECT_DIR$/Assets/Script/Item/StopPos.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/ControlDoorItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Item/NormalDoorItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/controlDoors.json" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/NormalDoorItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" />
       </list>
     </option>
   </component>
@@ -168,7 +147,7 @@
       <workItem from="1611831450415" duration="5298000" />
       <workItem from="1611917737056" duration="11414000" />
       <workItem from="1611963171375" duration="10502000" />
-      <workItem from="1611991918971" duration="5898000" />
+      <workItem from="1611991918971" duration="6549000" />
     </task>
     <servers />
   </component>

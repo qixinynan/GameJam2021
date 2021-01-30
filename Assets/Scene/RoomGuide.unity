@@ -451,6 +451,7 @@ MonoBehaviour:
   boyRoomId: -1
   girlRoomId: 1
   bossRoomId: 1
+  enterDoorId: -999
 --- !u!4 &550706417
 Transform:
   m_ObjectHideFlags: 0

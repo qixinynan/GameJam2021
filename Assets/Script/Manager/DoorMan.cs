@@ -70,6 +70,7 @@ public class NormalDoorInfo
     public bool CanEnter()
     {
         ControlDoorInfo info = GameController.manager.doorMan.GetControlInfoById(parentId);
+        //Debug.Log(info.colorType +  " ---- " +  colorType);
         if (info == null)
         {
             return false;

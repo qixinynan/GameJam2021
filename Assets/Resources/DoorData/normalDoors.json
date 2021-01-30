@@ -2,7 +2,7 @@
   {
     "id": 100,
     "backId": 2,
-    "parentId": 0,
+    "parentId": 1,
     "type": 0,
     "toRoomId": 0
   }
