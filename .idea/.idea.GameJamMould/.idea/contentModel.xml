@@ -28,9 +28,6 @@
             <e p="使用方法.txt" t="Include" />
           </e>
         </e>
-        <e p="Anim" t="Include">
-          <e p="PlaceHolder.txt" t="Include" />
-        </e>
         <e p="Editor" t="Include">
           <e p="PlaceholderTests.cs" t="Include" />
           <e p="Unity.2D.Tilemap.Extras.EditorTests.asmdef" t="Include" />
@@ -76,6 +73,7 @@
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerTouch.cs" t="Include" />
           </e>
+          <e p="ScreenFader.cs" t="Include" />
         </e>
         <e p="Sound" t="Include">
           <e p="PlaceHolder.txt" t="Include" />

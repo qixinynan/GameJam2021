@@ -14,16 +14,17 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public static PlayerMovement instance;
     public CinemachineVirtualCamera virtualCamera;
-    private bool isMoving = false;
+    //private bool isMoving = false;
     private bool isControllA = true;
-    
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        } else if (instance != this)
+        }
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -32,31 +33,24 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         PlayerControllUpdate();
-        if (isControllA)
-        {
-            PlayerMove(playerA);
-        }
-        else
-        {
-             PlayerMove(playerB);
-        }
-
+        PlayerMove(isControllA ? playerA : playerB);
     }
 
     void PlayerMove(GameObject player)
     {
-        Rigidbody2D rig = player.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         float xMove = 0;
         float yMove = 0;
-        
+
         if (Input.GetKey(KeyCode.W))
         {
             yMove = speed;
         }
-        else if(Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             yMove = -speed;
         }
+
         if (Input.GetKey(KeyCode.A))
         {
             xMove = -speed;
@@ -65,22 +59,55 @@ public class PlayerMovement : MonoBehaviour
         {
             xMove = speed;
         }
-        if (yMove != 0)
+
+        /*if (!Mathf.Approximately(yMove,0))
         {
-            rig.velocity = new Vector2(rig.velocity.x, yMove);
-            isMoving = true;
+            rb.velocity = new Vector2(rb.velocity.x, yMove);
+            //isMoving = true;
+        }  else
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
         }
-        if(xMove != 0)
+
+        if (!Mathf.Approximately(xMove,0))
         {
-            rig.velocity = new Vector2(xMove,rig.velocity.y);
-            isMoving = true;
+            rb.velocity = new Vector2(xMove, rb.velocity.y);
+            //isMoving = true;
         }
-        if (xMove == 0 && yMove == 0)
+        else
         {
-            rig.velocity = new Vector2(0,0);
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }*/
+
+        rb.velocity = new Vector2(xMove, yMove);
+        /*if (Mathf.Approximately(xMove, 0) && Mathf.Approximately(yMove, 0))
+        {
+            rb.velocity = new Vector2(0, 0);
+        }*/
+
+        UpdateAnim(player, xMove, yMove);
+    }
+
+    private void UpdateAnim(GameObject player, float xMove, float yMove)
+    {
+        if (Mathf.Approximately(xMove, 0) && Mathf.Approximately(yMove, 0))
+        {
+            player.GetComponent<Animator>().SetInteger("dir", 0);
+            return;
+        }
+        if (Mathf.Abs(yMove) > Mathf.Abs(xMove))
+        {
+            player.GetComponent<Animator>().SetInteger("dir", yMove > 0 ? 1 : 2);
+        }
+        else
+        {
+            player.GetComponent<Animator>().SetInteger("dir", 3);
+            player.transform.localScale = new Vector3(Mathf.Abs(player.transform.localScale.x) * (xMove > 0 ? -1.0f: 1.0f),
+                player.transform.localScale.y
+                , player.transform.localScale.z);
         }
     }
-    
+
     void PlayerControllUpdate()
     {
         if (Input.GetKeyUp(KeyCode.Space))
@@ -95,4 +122,5 @@ public class PlayerMovement : MonoBehaviour
         isControllA = !isControllA;
         virtualCamera.Follow = isControllA ? playerA.gameObject.transform : playerB.gameObject.transform;
     }
+
 }

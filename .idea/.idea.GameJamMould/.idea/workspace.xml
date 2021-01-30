@@ -3,10 +3,46 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Door1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Door1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Door2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Door2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Door2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Door2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlaceHolder.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlaceHolder.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMove.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMove.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/door2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Door/door2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Empty 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Empty 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +154,8 @@
       <workItem from="1611414111731" duration="96000" />
       <workItem from="1611472438155" duration="2478000" />
       <workItem from="1611831450415" duration="5298000" />
-      <workItem from="1611917737056" duration="10572000" />
+      <workItem from="1611917737056" duration="11414000" />
+      <workItem from="1611963171375" duration="857000" />
     </task>
     <servers />
   </component>
@@ -127,6 +164,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
