@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,8 @@ public class GameController : MonoBehaviour
     public GameObject girl;
     public bool isControllBoy;
     public ScreenFader screenFader;
+    
+    public CinemachineVirtualCamera virtualCamera;
 
     public int boyRoomId = 0;
     public int girlRoomId = 1;

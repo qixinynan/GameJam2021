@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public static PlayerMovement instance;
-    public CinemachineVirtualCamera virtualCamera;
     //private bool isMoving = false;
     //private bool isControllA = true;
 
@@ -127,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
     void ControllChange()
     {
         GameController.manager.isControllBoy = !GameController.manager.isControllBoy;
-        virtualCamera.Follow = GameController.manager.isControllBoy ? GameController.manager.boy.transform : GameController.manager.girl.transform;
+        GameController.manager.virtualCamera.Follow = GameController.manager.isControllBoy ? GameController.manager.boy.transform : GameController.manager.girl.transform;
     }
 
 }
