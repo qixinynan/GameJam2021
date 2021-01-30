@@ -33,9 +33,8 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        PlayerControllUpdate();
-        GameObject player = GameController.manager.isControllBoy ? GameController.manager.boy : GameController.manager.girl;
-        PlayerMove(player);
+        //GameObject player = GameController.manager.isControllBoy ? GameController.manager.boy : GameController.manager.girl;
+        PlayerMove(GameController.manager.player);
     }
 
     void PlayerMove(GameObject player)
@@ -94,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnim(player, xMove, yMove);
     }
 
-    private void UpdateAnim(GameObject player, float xMove, float yMove)
+    public void UpdateAnim(GameObject player, float xMove, float yMove)
     {
         if (Mathf.Approximately(xMove, 0) && Mathf.Approximately(yMove, 0))
         {
@@ -113,20 +112,4 @@ public class PlayerMovement : MonoBehaviour
                 , player.transform.localScale.z);
         }
     }
-
-    void PlayerControllUpdate()
-    {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            ControllChange();
-        }
-    }
-
-
-    void ControllChange()
-    {
-        GameController.manager.isControllBoy = !GameController.manager.isControllBoy;
-        GameController.manager.virtualCamera.Follow = GameController.manager.isControllBoy ? GameController.manager.boy.transform : GameController.manager.girl.transform;
-    }
-
 }

@@ -18,13 +18,13 @@ public class GameController : MonoBehaviour
     public GameObject girl;
     public bool isControllBoy;
     public ScreenFader screenFader;
-    
+
     public CinemachineVirtualCamera virtualCamera;
 
     public int boyRoomId = 0;
     public int girlRoomId = 1;
-    
-    
+
+
     private void Awake()
     {
         if (manager == null)
@@ -47,9 +47,9 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            LoadLevel(0);
+            ChangeRole(); 
         }
     }
 
@@ -59,10 +59,24 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene(level);
             GameController.manager.disableInput = true;
-            screenFader.ScreenToClear(() =>
-            {
-                GameController.manager.disableInput = false;
-            });
+            screenFader.ScreenToClear(() => { GameController.manager.disableInput = false; });
         });
+    }
+
+    public void ChangeRole()
+    {
+        if (isControllBoy)
+        {
+            boy.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            PlayerMovement.instance.UpdateAnim(boy, 0, 0);
+        }
+        else
+        {
+            girl.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            PlayerMovement.instance.UpdateAnim(girl, 0, 0);
+        }
+        isControllBoy = !isControllBoy;
+        player = isControllBoy ? boy : girl;
+        virtualCamera.Follow = isControllBoy ? boy.transform : girl.transform;
     }
 }
