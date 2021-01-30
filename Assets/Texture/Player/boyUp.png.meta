@@ -50,6 +50,30 @@ TextureImporter:
   - first:
       213: 6389430078987097678
     second: man2_7
+  - first:
+      213: 6804863232849214280
+    second: boyUp_0
+  - first:
+      213: -1789272230378407780
+    second: boyUp_1
+  - first:
+      213: -6957279176007195603
+    second: boyUp_2
+  - first:
+      213: 3941312756352435076
+    second: boyUp_3
+  - first:
+      213: -1069671061304852082
+    second: boyUp_4
+  - first:
+      213: -1263246546156564118
+    second: boyUp_5
+  - first:
+      213: -4507226252935694676
+    second: boyUp_6
+  - first:
+      213: 7051241965605623789
+    second: boyUp_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -147,7 +171,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: man2_0
+      name: boyUp_0
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cb01ab6de57b6150800000000000000
-      internalID: 5866912602153618372
+      spriteID: 84bf71b7e0bbf6e50800000000000000
+      internalID: 6804863232849214280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_1
+      name: boyUp_1
       rect:
         serializedVersion: 2
         x: 36
@@ -182,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4973d7d5803ef68a0800000000000000
-      internalID: -6309574927855044716
+      spriteID: c98f2dde26a3b27e0800000000000000
+      internalID: -1789272230378407780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_2
+      name: boyUp_2
       rect:
         serializedVersion: 2
         x: 72
@@ -203,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02b1737fc6d52a010800000000000000
-      internalID: 1198623173419408160
+      spriteID: d246ede5377c27f90800000000000000
+      internalID: -6957279176007195603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_3
+      name: boyUp_3
       rect:
         serializedVersion: 2
         x: 108
@@ -224,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d41ae059359c0170800000000000000
-      internalID: 8146049899409577177
+      spriteID: 4834a17e11b52b630800000000000000
+      internalID: 3941312756352435076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_4
+      name: boyUp_4
       rect:
         serializedVersion: 2
         x: 143
@@ -245,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b11204111c4cfb80800000000000000
-      internalID: -8359723172072648268
+      spriteID: e81c86c46d3c721f0800000000000000
+      internalID: -1069671061304852082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_5
+      name: boyUp_5
       rect:
         serializedVersion: 2
         x: 179
@@ -266,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e48901d574b40530800000000000000
-      internalID: 3820376802028258533
+      spriteID: a61599095fb087ee0800000000000000
+      internalID: -1263246546156564118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_6
+      name: boyUp_6
       rect:
         serializedVersion: 2
         x: 215
@@ -287,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2dada8b5cd117c80800000000000000
-      internalID: -8326841500987183830
+      spriteID: ca6f37f6a9d1371c0800000000000000
+      internalID: -4507226252935694676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man2_7
+      name: boyUp_7
       rect:
         serializedVersion: 2
         x: 251
@@ -308,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e46d83fddc0dba850800000000000000
-      internalID: 6389430078987097678
+      spriteID: de71049653b0bd160800000000000000
+      internalID: 7051241965605623789
       vertices: []
       indices: 
       edges: []

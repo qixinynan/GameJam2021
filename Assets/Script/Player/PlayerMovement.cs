@@ -9,13 +9,11 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject playerA;
-    public GameObject playerB;
     public float speed;
     public static PlayerMovement instance;
     public CinemachineVirtualCamera virtualCamera;
     //private bool isMoving = false;
-    private bool isControllA = true;
+    //private bool isControllA = true;
 
     private void Awake()
     {
@@ -32,8 +30,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameController.manager.disableInput)
+        {
+            return;
+        }
         PlayerControllUpdate();
-        PlayerMove(isControllA ? playerA : playerB);
+        GameObject player = GameController.manager.isControllBoy ? GameController.manager.boy : GameController.manager.girl;
+        PlayerMove(player);
     }
 
     void PlayerMove(GameObject player)
@@ -119,8 +122,8 @@ public class PlayerMovement : MonoBehaviour
 
     void ControllChange()
     {
-        isControllA = !isControllA;
-        virtualCamera.Follow = isControllA ? playerA.gameObject.transform : playerB.gameObject.transform;
+        GameController.manager.isControllBoy = !GameController.manager.isControllBoy;
+        virtualCamera.Follow = GameController.manager.isControllBoy ? GameController.manager.boy.transform : GameController.manager.girl.transform;
     }
 
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class GameController : MonoBehaviour
 
     public bool disableInput = false;
     public GameObject player;
+    public GameObject boy;
+    public GameObject girl;
+    public bool isControllBoy;
+    public ScreenFader screenFader;
     
     private void Awake()
     {
@@ -31,5 +36,26 @@ public class GameController : MonoBehaviour
         dialogMan.ParseDialogInfo();
         taskMan.ParseTaskInfo();
         doorMan.ParseDoorInfos();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            LoadLevel(0);
+        }
+    }
+
+    public void LoadLevel(int level)
+    {
+        screenFader.ScreenToBlack(() =>
+        {
+            SceneManager.LoadScene(level);
+            GameController.manager.disableInput = true;
+            screenFader.ScreenToClear(() =>
+            {
+                GameController.manager.disableInput = false;
+            });
+        });
     }
 }
