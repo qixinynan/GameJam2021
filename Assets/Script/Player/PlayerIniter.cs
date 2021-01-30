@@ -13,6 +13,7 @@ public class PlayerIniter : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Debug.Log("????????????????????????");
         yield return new WaitUntil(() =>
         {
             return GameController.manager != null;
@@ -26,7 +27,6 @@ public class PlayerIniter : MonoBehaviour
         Vector3 startPos = Vector3.zero;
         if (GameController.manager.enterDoorId != -999 && FindStartPos(out startPos))
         {
-            Debug.Log("--------" + GameController.manager.enterDoorId);
             if (GameController.manager.isControllBoy)
             {
                 GameController.manager.boyPos = startPos;

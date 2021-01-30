@@ -74,12 +74,19 @@ public class GameController : MonoBehaviour
             if (level != SceneManager.GetActiveScene().buildIndex)
             {
                 // set GameController Pos
+                Debug.Log(level);
+                Debug.Log("-=-=-=-=-=-=-=-=--=-=");
+                if (changeLevel != null)
+                {
+                    changeLevel();
+                }
+                Debug.Log("sssssssssssssssssssssss");
                 SceneManager.LoadScene(level);
-                changeLevel?.Invoke();
             }
             else
             {
                 // set CurrentPos
+                Debug.Log("2321312321312312312");
                 sameLevel?.Invoke();
             }
             screenFader.ScreenToClear(() =>

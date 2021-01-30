@@ -28,6 +28,16 @@ public class PlayerTouch : MonoBehaviour
                             Debug.Log("Change Scene");
                             GameController.manager.enterDoorId =
                                 selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId;
+                            if (GameController.manager.isControllBoy)
+                            {
+                                GameController.manager.boyRoomId =
+                                    selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().toRoomId;
+                            }
+                            else
+                            {
+                                GameController.manager.girlRoomId =
+                                    selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().toRoomId;
+                            }
                         }, () =>
                         {
                             Vector3 pos = Vector3.zero;
@@ -66,7 +76,17 @@ public class PlayerTouch : MonoBehaviour
                         // TODO
                         Debug.Log("Change Scene");
                         GameController.manager.enterDoorId =
-                            selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId;
+                            selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().backDoorId;
+                        if (GameController.manager.isControllBoy)
+                        {
+                            GameController.manager.boyRoomId =
+                                selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().toRoomId;
+                        }
+                        else
+                        {
+                            GameController.manager.girlRoomId =
+                                selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().toRoomId;
+                        }
                     }, () =>
                     {
                         Vector3 pos = Vector3.zero;

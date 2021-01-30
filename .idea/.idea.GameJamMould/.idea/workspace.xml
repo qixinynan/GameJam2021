@@ -24,11 +24,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/ControlDoor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Door/ControlDoor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/NormalDoor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Door/NormalDoor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/RoomGuide.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/RoomGuide.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,18 +80,18 @@
         <option value="$PROJECT_DIR$/Assets/Script/Item/DoorItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/DialogBox/Script/DialogManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BossMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/StopPos.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/ControlDoorItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/controlDoors.json" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/NormalDoorItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" />
       </list>
     </option>
   </component>
@@ -147,7 +152,9 @@
       <workItem from="1611831450415" duration="5298000" />
       <workItem from="1611917737056" duration="11414000" />
       <workItem from="1611963171375" duration="10502000" />
-      <workItem from="1611991918971" duration="6549000" />
+      <workItem from="1611991918971" duration="6678000" />
+      <workItem from="1612014670090" duration="624000" />
+      <workItem from="1612015453709" duration="688000" />
     </task>
     <servers />
   </component>
@@ -180,9 +187,9 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="273" y="216" width="882" height="490" key="find.popup/0.23.1440.821@0.23.1440.821" timestamp="1611832193513" />
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1612011247238">
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1612014988377">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1612011247238" />
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1612014988377" />
   </component>
 </project>

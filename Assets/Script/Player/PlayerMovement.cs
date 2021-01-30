@@ -73,31 +73,8 @@ public class PlayerMovement : MonoBehaviour
             player.GetComponent<AudioSource>().Stop();
         }
         
-        /*if (!Mathf.Approximately(yMove,0))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, yMove);
-            //isMoving = true;
-        }  else
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-        }
-
-        if (!Mathf.Approximately(xMove,0))
-        {
-            rb.velocity = new Vector2(xMove, rb.velocity.y);
-            //isMoving = true;
-        }
-        else
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }*/
-
+        
         rb.velocity = new Vector2(xMove, yMove);
-        /*if (Mathf.Approximately(xMove, 0) && Mathf.Approximately(yMove, 0))
-        {
-            rb.velocity = new Vector2(0, 0);
-        }*/
-
         UpdateMove(player, xMove, yMove);
     }
 
@@ -106,23 +83,23 @@ public class PlayerMovement : MonoBehaviour
         AudioSource audioSource = player.GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            Debug.LogError("AudioSource is null");
+            //Debug.LogError("AudioSource is null");
         }
         else if (audioSource.clip == null)
         {
-            Debug.LogWarning("Sound is null now");
+            //Debug.LogWarning("Sound is null now");
         }
         else
         {
             
             if (audioSource.isPlaying)
             {
-                Debug.Log("Sound is playing");    
+                //Debug.Log("Sound is playing");    
             }
             else
             {
                 audioSource.Play();
-                Debug.Log("Sound isn't playing now");
+                //Debug.Log("Sound isn't playing now");
             }
             
         }

@@ -449,7 +449,7 @@ MonoBehaviour:
   screenFader: {fileID: 970694132}
   virtualCamera: {fileID: 778379494}
   boyRoomId: -1
-  girlRoomId: 1
+  girlRoomId: 0
   bossRoomId: 1
   enterDoorId: -999
 --- !u!4 &550706417
