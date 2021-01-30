@@ -20,15 +20,13 @@ public class PlayerIniter : MonoBehaviour
         });
         GameController.manager.virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         // init player
-        int index = 0;
         GameController.manager.player = null;
         GameController.manager.boy = null;
         GameController.manager.girl = null;
         if (GameController.manager.boyRoomId == roomId)
         {
             GameObject boy = Instantiate(boyPrefab);
-            boy.transform.position = posList[index].position;
-            index += 1;
+            boy.transform.position = GameController.manager.boyPos;
             if (GameController.manager.isControllBoy)
             {
                 GameController.manager.player = boy;
@@ -40,8 +38,7 @@ public class PlayerIniter : MonoBehaviour
         if (GameController.manager.girlRoomId == roomId)
         {
             GameObject girl = Instantiate(girlPrefab);
-            girl.transform.position = posList[index].position;
-            index += 1;
+            girl.transform.position = GameController.manager.girlPos;
             if (!GameController.manager.isControllBoy)
             {
                 GameController.manager.player = girl;

@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public GameObject boy;
     public GameObject girl;
+    public Vector2 boyPos;
+    public Vector2 girlPos;
     public bool isControllBoy;
     public ScreenFader screenFader;
 

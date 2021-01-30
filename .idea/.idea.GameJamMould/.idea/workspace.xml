@@ -24,12 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Boy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Boy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Girl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Girl.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/Room0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/girlChange.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/girlChange.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,9 +84,9 @@
         <option value="$PROJECT_DIR$/Assets/Script/Player/BossMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
       </list>
     </option>
   </component>
@@ -145,7 +146,7 @@
       <workItem from="1611472438155" duration="2478000" />
       <workItem from="1611831450415" duration="5298000" />
       <workItem from="1611917737056" duration="11414000" />
-      <workItem from="1611963171375" duration="6876000" />
+      <workItem from="1611963171375" duration="7989000" />
     </task>
     <servers />
   </component>
