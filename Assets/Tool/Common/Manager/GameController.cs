@@ -78,12 +78,12 @@ public class GameController : MonoBehaviour
         if (isControllBoy)
         {
             boy.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            PlayerMovement.instance.UpdateAnim(boy, 0, 0);
+            PlayerMovement.instance.UpdateMove(boy, 0, 0);
         }
         else
         {
             girl.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            PlayerMovement.instance.UpdateAnim(girl, 0, 0);
+            PlayerMovement.instance.UpdateMove(girl, 0, 0);
         }
         isControllBoy = !isControllBoy;
         player = isControllBoy ? boy : girl;

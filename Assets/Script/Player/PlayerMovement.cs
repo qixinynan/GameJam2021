@@ -39,8 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerMove(GameObject player)
     {
-        if (player == null)
-        {
+        if (player == null){
+        
+            Debug.LogError("Player is Null");
             return;
         }
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             yMove = speed;
+            
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -64,7 +66,13 @@ public class PlayerMovement : MonoBehaviour
         {
             xMove = speed;
         }
-
+        if(xMove!=0 || yMove!=0) 
+            PlayWalkingSound(player);
+        else
+        {
+            player.GetComponent<AudioSource>().Stop();
+        }
+        
         /*if (!Mathf.Approximately(yMove,0))
         {
             rb.velocity = new Vector2(rb.velocity.x, yMove);
@@ -90,10 +98,36 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
         }*/
 
-        UpdateAnim(player, xMove, yMove);
+        UpdateMove(player, xMove, yMove);
     }
 
-    public void UpdateAnim(GameObject player, float xMove, float yMove)
+    public void PlayWalkingSound(GameObject player)
+    {
+        AudioSource audioSource = player.GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource is null");
+        }
+        else if (audioSource.clip == null)
+        {
+            Debug.LogWarning("Sound is null now");
+        }
+        else
+        {
+            
+            if (audioSource.isPlaying)
+            {
+                Debug.Log("Sound is playing");    
+            }
+            else
+            {
+                audioSource.Play();
+                Debug.Log("Sound isn't playing now");
+            }
+            
+        }
+    }
+    public void UpdateMove(GameObject player, float xMove, float yMove)
     {
         if (Mathf.Approximately(xMove, 0) && Mathf.Approximately(yMove, 0))
         {
