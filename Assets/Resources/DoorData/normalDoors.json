@@ -1,14 +1,9 @@
 [
   {
-    "id": 11,
+    "id": 100,
+    "backId": 2,
     "parentId": 0,
-    "type": 1,
-    "toRoomId": 1
-  },
-  {
-    "id": 12,
-    "parentId": 0,
-    "type": 2,
-    "toRoomId": 1
+    "type": 0,
+    "toRoomId": 0
   }
 ]

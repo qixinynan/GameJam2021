@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControlDoorItem : MonoBehaviour
 {
     public int id;
+    public Transform showPosTrans;
     
     public void SwitchType()
     {
@@ -14,5 +15,21 @@ public class ControlDoorItem : MonoBehaviour
             info.SwitchType();
         }
     }
+    
+    public bool CanEnter()
+    {
+        bool canEnter =  GameController.manager.doorMan.GetControlInfoById(id).CanEnter();
+        return canEnter;
+    }
 
+    public int GetDestScene()
+    {
+        ControlDoorInfo info = GameController.manager.doorMan.GetControlInfoById(id);
+        return Util.roomToSceneDict[info.toRoomId];
+    }
+
+    public ControlDoorInfo GetInfo()
+    {
+        return GameController.manager.doorMan.GetControlInfoById(id);
+    }
 }

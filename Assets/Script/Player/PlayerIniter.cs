@@ -8,9 +8,8 @@ public class PlayerIniter : MonoBehaviour
 {
     public GameObject boyPrefab;
     public GameObject girlPrefab;
+    public GameObject bossPrefab;
     public int roomId;
-
-    public List<Transform> posList;
 
     private IEnumerator Start()
     {
@@ -23,6 +22,20 @@ public class PlayerIniter : MonoBehaviour
         GameController.manager.player = null;
         GameController.manager.boy = null;
         GameController.manager.girl = null;
+
+        Vector3 startPos = Vector3.zero;
+        if (GameController.manager.enterDoorId != -999 && FindStartPos(out startPos))
+        {
+            if (GameController.manager.isControllBoy)
+            {
+                GameController.manager.boyPos = startPos;
+            }
+            else
+            {
+                GameController.manager.girlPos = startPos;
+            }
+        }
+
         if (GameController.manager.boyRoomId == roomId)
         {
             GameObject boy = Instantiate(boyPrefab);
@@ -47,6 +60,37 @@ public class PlayerIniter : MonoBehaviour
 
             GameController.manager.girl = girl;
         }
+        if (GameController.manager.bossRoomId == roomId)
+        {
+            GameObject boss = Instantiate(bossPrefab);
+            bossPrefab.transform.position = GameController.manager.bossPos;
+        }
         
+    }
+
+    private bool FindStartPos(out Vector3 pos)
+    {
+        ControlDoorItem[] controlItems = FindObjectsOfType<ControlDoorItem>();
+        NormalDoorItem[] normalItems = FindObjectsOfType<NormalDoorItem>();
+        bool find = false;
+        for (int i = 0; i < controlItems.Length; i++)
+        {
+            if (controlItems[i].id == GameController.manager.enterDoorId)
+            {
+                pos = controlItems[i].showPosTrans.position;
+                return true;
+            }
+        }
+        for (int i = 0; i < normalItems.Length; i++)
+        {
+            if (normalItems[i].id == GameController.manager.enterDoorId)
+            {
+                pos = controlItems[i].showPosTrans.position;
+                return true;
+            }
+        }
+
+        pos = Vector3.zero;
+        return false;
     }
 }

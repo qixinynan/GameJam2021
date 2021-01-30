@@ -169,6 +169,8 @@ MonoBehaviour:
     type: 3}
   girlPrefab: {fileID: 4234672371954853969, guid: dfd587102902d40b099cb9f248b14f99,
     type: 3}
+  bossPrefab: {fileID: 1249902880928363317, guid: 2ea6fc2f5b06246f6b15fee93d79c7de,
+    type: 3}
   roomId: 1
   posList:
   - {fileID: 1844146423}
@@ -369,14 +371,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableInput: 0
+  isGameOver: 0
   player: {fileID: 0}
   boy: {fileID: 0}
   girl: {fileID: 0}
+  boyPos: {x: -4, y: -3}
+  girlPos: {x: 4, y: -3}
+  bossPos: {x: 0, y: 0}
   isControllBoy: 1
   screenFader: {fileID: 970694132}
   virtualCamera: {fileID: 778379494}
   boyRoomId: 0
   girlRoomId: 0
+  bossRoomId: 1
 --- !u!4 &550706417
 Transform:
   m_ObjectHideFlags: 0

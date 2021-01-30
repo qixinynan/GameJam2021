@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (GameController.manager.disableInput)
+        if (GameController.manager.disableInput ||  GameController.manager.isGameOver)
         {
             return;
         }

@@ -13,11 +13,15 @@ public class GameController : MonoBehaviour
     public DoorMan doorMan = new DoorMan();
 
     public bool disableInput = false;
+    public bool isGameOver = false;
     public GameObject player;
     public GameObject boy;
     public GameObject girl;
     public Vector2 boyPos;
     public Vector2 girlPos;
+    public Vector2 bossPos;
+    
+    
     public bool isControllBoy;
     public ScreenFader screenFader;
 
@@ -25,7 +29,9 @@ public class GameController : MonoBehaviour
 
     public int boyRoomId = 0;
     public int girlRoomId = 1;
+    public int bossRoomId = 1;
 
+    public int enterDoorId = -1;
 
     private void Awake()
     {
@@ -60,12 +66,22 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void LoadLevel(int level)
+    public void LoadLevel(int level, Util.NoParmsCallBack changeLevel = null, Util.NoParmsCallBack sameLevel = null)
     {
         GameController.manager.disableInput = true;
         screenFader.ScreenToBlack(() =>
         {
-            SceneManager.LoadScene(level);
+            if (level != SceneManager.GetActiveScene().buildIndex)
+            {
+                // set GameController Pos
+                SceneManager.LoadScene(level);
+                changeLevel?.Invoke();
+            }
+            else
+            {
+                // set CurrentPos
+                sameLevel?.Invoke();
+            }
             screenFader.ScreenToClear(() =>
             {
                 GameController.manager.disableInput = false;
@@ -91,9 +107,33 @@ public class GameController : MonoBehaviour
         if (player != null)
         {
             virtualCamera.Follow = isControllBoy ? boy.transform : girl.transform;
+            if (isControllBoy)
+            {
+                // girl sleep
+                girl.GetComponent<Animator>().SetInteger("dir", -1);
+                girl.GetComponent<Animator>().SetTrigger("sleep");
+            }
+            else
+            {
+                // boy sleep
+                boy.GetComponent<Animator>().SetInteger("dir", -1);
+                boy.GetComponent<Animator>().SetTrigger("sleep");
+            }
         }
         else if(Util.roomToSceneDict.ContainsKey(id))
         {
+            if (isControllBoy)
+            {
+                // girl sleep
+                girl.GetComponent<Animator>().SetInteger("dir", -1);
+                girl.GetComponent<Animator>().SetTrigger("sleep");
+            }
+            else
+            {
+                // boy sleep
+                boy.GetComponent<Animator>().SetInteger("dir", -1);
+                boy.GetComponent<Animator>().SetTrigger("sleep");
+            }
             LoadLevel(Util.roomToSceneDict[id]);
         }
         else

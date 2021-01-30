@@ -12,15 +12,86 @@ public class PlayerTouch : MonoBehaviour
     {
         if (isTouchDoor && selectDoorItem != null)
         {
-            if (selectDoorItem.GetComponent<ControlDoorItem>() != null && Input.GetKeyDown(KeyCode.E))
+            if (selectDoorItem.GetComponent<ControlDoorItem>() != null)
             {
-                selectDoorItem.GetComponent<ControlDoorItem>().SwitchType();
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    selectDoorItem.GetComponent<ControlDoorItem>().SwitchType();
+                }  else if (Input.GetKeyDown(KeyCode.E) && selectDoorItem.GetComponent<ControlDoorItem>().CanEnter())
+                {
+                    // judge and enter next room 
+                    Debug.Log("Enter next room");
+                    GameController.manager.LoadLevel(selectDoorItem.GetComponent<ControlDoorItem>().GetDestScene(),
+                        () =>
+                        {
+                            // TODO
+                            Debug.Log("Change Scene");
+                            GameController.manager.enterDoorId =
+                                selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId;
+                        }, () =>
+                        {
+                            Vector3 pos = Vector3.zero;
+                            ControlDoorItem[] controlItems = FindObjectsOfType<ControlDoorItem>();
+                            NormalDoorItem[] normalItems = FindObjectsOfType<NormalDoorItem>();
+                            bool find = false;
+                            for (int i = 0; i < controlItems.Length; i++)
+                            {
+                                if (controlItems[i].id == selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId)
+                                {
+                                    GameController.manager.player.transform.position =
+                                        controlItems[i].showPosTrans.position;
+                                    return;
+                                }
+                            }
+                            for (int i = 0; i < normalItems.Length; i++)
+                            {
+                                if (normalItems[i].id == selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId)
+                                {
+                                    GameController.manager.player.transform.position =
+                                        controlItems[i].showPosTrans.position;
+                                    return;
+                                }
+                            }
+                        });
+                }
             }
             else if (selectDoorItem.GetComponent<NormalDoorItem>() != null &&
-                     selectDoorItem.GetComponent<NormalDoorItem>().CanEnter())
+                     selectDoorItem.GetComponent<NormalDoorItem>().CanEnter() && Input.GetKeyDown(KeyCode.E))
             {
                 // judge and enter next room 
-            
+                Debug.Log("Enter next room");
+                GameController.manager.LoadLevel(selectDoorItem.GetComponent<NormalDoorItem>().GetDestScene(),
+                    () =>
+                    {
+                        // TODO
+                        Debug.Log("Change Scene");
+                        GameController.manager.enterDoorId =
+                            selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId;
+                    }, () =>
+                    {
+                        Vector3 pos = Vector3.zero;
+                        ControlDoorItem[] controlItems = FindObjectsOfType<ControlDoorItem>();
+                        NormalDoorItem[] normalItems = FindObjectsOfType<NormalDoorItem>();
+                        bool find = false;
+                        for (int i = 0; i < controlItems.Length; i++)
+                        {
+                            if (controlItems[i].id == selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().backDoorId)
+                            {
+                                GameController.manager.player.transform.position =
+                                    controlItems[i].showPosTrans.position;
+                                return;
+                            }
+                        }
+                        for (int i = 0; i < normalItems.Length; i++)
+                        {
+                            if (normalItems[i].id == selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId)
+                            {
+                                GameController.manager.player.transform.position =
+                                    controlItems[i].showPosTrans.position;
+                                return;
+                            }
+                        }
+                    });
             }
         }
     }

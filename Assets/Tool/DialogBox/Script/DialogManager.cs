@@ -63,7 +63,7 @@ public class DialogManager
             dialogInfoDict.Add(dialogInfo.id, dialogInfo);
         }
 
-        Debug.Log("对话数据加载完成，一共加载了"+ dialogInfoDict.Count.ToString() + "个对话脚本");
+        //Debug.Log("对话数据加载完成，一共加载了"+ dialogInfoDict.Count.ToString() + "个对话脚本");
     }
 
     public void RegisterSelectionCallback(int dialogId, int nextIndex, Util.NoParmsCallBack callback)

@@ -19,7 +19,10 @@ public enum DoorType
 public class ControlDoorInfo
 {
     public int id;
+    public int backDoorId;
     public DoorColorType colorType;
+    public int toRoomId;
+    
 
     public void SwitchType()
     {
@@ -27,11 +30,39 @@ public class ControlDoorInfo
         colorType = (DoorColorType) t;
         Debug.Log("current type is :  " + colorType);
     }
+
+    public bool CanEnter()
+    {
+        bool sameControl = false;
+        ControlDoorInfo controlInfo = GameController.manager.doorMan.GetControlInfoById(backDoorId);
+        if (controlInfo == null)
+        {
+            sameControl = false;
+        }
+        else
+        {
+            sameControl = controlInfo.colorType == colorType;
+        }
+
+        bool sameNormal = false;
+        NormalDoorInfo normalInfo = GameController.manager.doorMan.GetNormalInfoById(backDoorId);
+        if (normalInfo == null)
+        {
+            sameNormal = false;
+        }
+        else
+        {
+            sameNormal = normalInfo.colorType == colorType;
+        }
+
+        return sameControl || sameNormal;
+    }
 }
 
 public class NormalDoorInfo
 {
     public int id;
+    public int backDoorId;
     public int parentId;
     public DoorColorType colorType;
     public int toRoomId;
@@ -61,22 +92,26 @@ public class DoorMan
         {
             ControlDoorInfo controlDoorInfo = new ControlDoorInfo();
             controlDoorInfo.id = (int) item["id"];
-            controlDoorInfo.colorType = (DoorColorType) (int)item["type"];
+            controlDoorInfo.backDoorId = (int) item["backId"];
+            controlDoorInfo.colorType = (DoorColorType) (int) item["type"];
+            controlDoorInfo.toRoomId = (int) item["toRoomId"];
             controlDoorDict[controlDoorInfo.id] = controlDoorInfo;
         }
+
         JsonData normalData = JsonMapper.ToObject(Resources.Load<TextAsset>("DoorData/normalDoors").text);
         foreach (JsonData item in normalData)
         {
             NormalDoorInfo normalDoorInfo = new NormalDoorInfo();
             normalDoorInfo.id = (int) item["id"];
+            normalDoorInfo.backDoorId = (int) item["backId"];
             normalDoorInfo.parentId = (int) item["parentId"];
-            normalDoorInfo.colorType = (DoorColorType) (int)item["type"];
+            normalDoorInfo.colorType = (DoorColorType) (int) item["type"];
             normalDoorInfo.toRoomId = (int) item["toRoomId"];
             normalDoorDict[normalDoorInfo.id] = normalDoorInfo;
         }
     }
 
-    public ControlDoorInfo GetControlInfoById(int id)  
+    public ControlDoorInfo GetControlInfoById(int id)
     {
         if (!controlDoorDict.ContainsKey(id))
         {
@@ -85,8 +120,8 @@ public class DoorMan
 
         return controlDoorDict[id];
     }
-    
-    public NormalDoorInfo GetNormalInfoById(int id)  
+
+    public NormalDoorInfo GetNormalInfoById(int id)
     {
         if (!normalDoorDict.ContainsKey(id))
         {

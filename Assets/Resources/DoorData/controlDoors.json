@@ -1,6 +1,20 @@
 [
   {
     "id": 0,
-    "type": 0
+    "backId": 1,
+    "type": 0,
+    "toRoomId": -1
+  },
+  {
+    "id": 1,
+    "backId": 0,
+    "type": 1,
+    "toRoomId": -1
+  },
+  {
+    "id": 2,
+    "backId": 0,
+    "type": 1,
+    "toRoomId": -1
   }
 ]
