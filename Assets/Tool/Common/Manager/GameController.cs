@@ -47,7 +47,12 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (disableInput)
+        {
+            return;
+            ;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             ChangeRole(); 
         }
@@ -55,11 +60,14 @@ public class GameController : MonoBehaviour
 
     public void LoadLevel(int level)
     {
+        GameController.manager.disableInput = true;
         screenFader.ScreenToBlack(() =>
         {
             SceneManager.LoadScene(level);
-            GameController.manager.disableInput = true;
-            screenFader.ScreenToClear(() => { GameController.manager.disableInput = false; });
+            screenFader.ScreenToClear(() =>
+            {
+                GameController.manager.disableInput = false;
+            });
         });
     }
 
@@ -77,6 +85,18 @@ public class GameController : MonoBehaviour
         }
         isControllBoy = !isControllBoy;
         player = isControllBoy ? boy : girl;
-        virtualCamera.Follow = isControllBoy ? boy.transform : girl.transform;
+        int id = isControllBoy ? boyRoomId : girlRoomId;
+        if (player != null)
+        {
+            virtualCamera.Follow = isControllBoy ? boy.transform : girl.transform;
+        }
+        else if(Util.roomToSceneDict.ContainsKey(id))
+        {
+            LoadLevel(Util.roomToSceneDict[id]);
+        }
+        else
+        {
+            Debug.LogError("Error room id : " + id);
+        }
     }
 }

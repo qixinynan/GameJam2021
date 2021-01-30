@@ -21,6 +21,9 @@ public class PlayerIniter : MonoBehaviour
         GameController.manager.virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         // init player
         int index = 0;
+        GameController.manager.player = null;
+        GameController.manager.boy = null;
+        GameController.manager.girl = null;
         if (GameController.manager.boyRoomId == roomId)
         {
             GameObject boy = Instantiate(boyPrefab);

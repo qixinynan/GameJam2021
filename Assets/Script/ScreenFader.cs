@@ -54,6 +54,10 @@ public class ScreenFader : MonoBehaviour
     /// </summary>
     public void ScreenToClear(Util.NoParmsCallBack successCallback = null)
     {
+        if (isAnimanating)
+        {
+            return;
+        }
         isAnimanating = true;
         Tween t = DOTween.To(() => rawImage.color, x => rawImage.color = x, Color.clear, floatColorChangeSpeed);
         t.OnComplete(() =>
@@ -64,7 +68,7 @@ public class ScreenFader : MonoBehaviour
             rawImage.enabled = false;
             isBlack = false;
             isAnimanating = false;
-            
+            successCallback?.Invoke();
         });
         // FadeToClear();
         // //当我们的a值小于等于0.05f的时候 就相当于完全透明了
@@ -83,6 +87,10 @@ public class ScreenFader : MonoBehaviour
     /// </summary>
     public void ScreenToBlack(Util.NoParmsCallBack successCallback = null)
     {
+        if (isAnimanating)
+        {
+            return;
+        }
         isAnimanating = true;
         rawImage.enabled = true;
         Tween t = DOTween.To(() => rawImage.color, x => rawImage.color = x, Color.black, floatColorChangeSpeed);

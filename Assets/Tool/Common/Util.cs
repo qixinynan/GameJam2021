@@ -20,6 +20,8 @@ public static class Util
         {ObjectItemNameCollection.demo, 10}
     };
 
+    public static Dictionary<int, int> roomToSceneDict = new Dictionary<int, int> {{0, 0},{1, 1}};
+
     //type
     public delegate void NoParmsCallBack();
     public delegate bool BoolParmsCallBack();
