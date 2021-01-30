@@ -70,6 +70,7 @@
           <e p="PlaceHolder.txt" t="Include" />
           <e p="Player" t="Include">
             <e p="BossMovement.cs" t="Include" />
+            <e p="PlayerIniter.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerTouch.cs" t="Include" />
           </e>

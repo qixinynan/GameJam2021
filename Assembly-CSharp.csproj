@@ -81,6 +81,7 @@
      <Compile Include="Assets\Script\Item\StopPos.cs" />
      <Compile Include="Assets\Script\Manager\DoorMan.cs" />
      <Compile Include="Assets\Script\Player\BossMovement.cs" />
+     <Compile Include="Assets\Script\Player\PlayerIniter.cs" />
      <Compile Include="Assets\Script\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Script\Player\PlayerTouch.cs" />
      <Compile Include="Assets\Script\ScreenFader.cs" />

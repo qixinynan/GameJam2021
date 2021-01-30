@@ -23,31 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Player 1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Player 1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Player.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Player.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerIdle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerIdle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMoveDown.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMoveDown.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMoveSide.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMoveSide.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMoveUp.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/PlayerMoveUp.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/man3.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +41,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/BossMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd/Notification/CustomTinyMsg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Item/ControlDoorItem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -102,6 +84,7 @@
         <option value="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
       </list>
     </option>
   </component>
@@ -161,7 +144,7 @@
       <workItem from="1611472438155" duration="2478000" />
       <workItem from="1611831450415" duration="5298000" />
       <workItem from="1611917737056" duration="11414000" />
-      <workItem from="1611963171375" duration="3288000" />
+      <workItem from="1611963171375" duration="4351000" />
     </task>
     <servers />
   </component>

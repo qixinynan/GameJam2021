@@ -17,6 +17,10 @@ public class GameController : MonoBehaviour
     public GameObject girl;
     public bool isControllBoy;
     public ScreenFader screenFader;
+
+    public int boyRoomId = 0;
+    public int girlRoomId = 1;
+    
     
     private void Awake()
     {

@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerMove(GameObject player)
     {
+        if (player == null)
+        {
+            return;
+        }
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         float xMove = 0;
         float yMove = 0;
