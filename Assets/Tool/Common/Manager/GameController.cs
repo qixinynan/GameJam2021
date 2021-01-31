@@ -103,6 +103,7 @@ public class GameController : MonoBehaviour
     public void ChangeRole()
     {
         GameController.manager.disableInput = true;
+        GameController.manager.player.GetComponent<PlayerTouch>().moveAudio.Pause();
         if (isControllBoy)
         {
             boy.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
