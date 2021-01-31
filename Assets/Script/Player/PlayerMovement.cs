@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     //private bool isMoving = false;
     //private bool isControllA = true;
 
+    public AudioSource moveAudio;
+    
     private void Awake()
     {
         if (instance == null)
@@ -75,7 +77,11 @@ public class PlayerMovement : MonoBehaviour
             PlayWalkingSound(player);
         else
         {
-            player.GetComponent<AudioSource>().Stop();
+            moveAudio = player.GetComponent<PlayerTouch>().moveAudio;
+            if (moveAudio != null)
+            {
+                moveAudio.Stop();
+            }
         }
 
 
@@ -85,25 +91,25 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayWalkingSound(GameObject player)
     {
-        AudioSource audioSource = player.GetComponent<AudioSource>();
-        if (audioSource == null)
+        moveAudio = player.GetComponent<PlayerTouch>().moveAudio;
+        if (moveAudio == null)
         {
             //Debug.LogError("AudioSource is null");
         }
-        else if (audioSource.clip == null)
+        else if (moveAudio.clip == null)
         {
             //Debug.LogWarning("Sound is null now");
         }
         else
         {
 
-            if (audioSource.isPlaying)
+            if (moveAudio.isPlaying)
             {
 
             }
             else
             {
-                audioSource.Play();
+                moveAudio.Play();
             }
 
         }

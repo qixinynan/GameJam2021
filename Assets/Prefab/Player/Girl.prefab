@@ -148,7 +148,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.19, y: 0.58}
+    oldSize: {x: 0.2, y: 0.58}
     newSize: {x: 0.2, y: 0.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   isBoy: 0
   switchAudio: {fileID: 2961292154446489748}
   openDoorAudio: {fileID: 5028082329770131919}
+  moveAudio: {fileID: 8949202621366432363}
 --- !u!82 &8949202621366432363
 AudioSource:
   m_ObjectHideFlags: 0
@@ -293,7 +294,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5602baedfd43d3c4889ad917a5f43e19, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

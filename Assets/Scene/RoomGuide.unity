@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13f70bdc8de74106be535150e0bfd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveAudio: {fileID: 0}
 --- !u!4 &331015746
 Transform:
   m_ObjectHideFlags: 0
@@ -366,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc9931c1d2dd469aa57771fb69c4b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableInput: 0
+  disableInput: 1
   disableSpace: 1
   isGameOver: 0
   player: {fileID: 0}

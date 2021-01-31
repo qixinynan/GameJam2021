@@ -106,6 +106,7 @@ MonoBehaviour:
   isBoy: 1
   switchAudio: {fileID: 2554071109565776027}
   openDoorAudio: {fileID: 4567138313725004763}
+  moveAudio: {fileID: 6524845483871529894}
 --- !u!61 &2954470854359573627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -293,7 +294,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5602baedfd43d3c4889ad917a5f43e19, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

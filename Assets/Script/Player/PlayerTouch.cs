@@ -19,6 +19,7 @@ public class PlayerTouch : MonoBehaviour
 
     public AudioSource switchAudio;
     public AudioSource openDoorAudio;
+    public AudioSource moveAudio;
  
     private void Update()
     {
@@ -141,6 +142,7 @@ public class PlayerTouch : MonoBehaviour
         {
             GameController.manager.disableInput = true;
             GameController.manager.disableSpace = true;
+            GameController.manager.player.GetComponent<PlayerTouch>().moveAudio.Pause();
             GameController.manager.screenFader.ScreenToBlack(() =>
             {
                 GameController.manager.thanksBg.SetActiveFast(true);
