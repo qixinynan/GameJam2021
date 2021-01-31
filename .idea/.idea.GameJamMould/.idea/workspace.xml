@@ -23,24 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/box3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/box3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/desk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/desk.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/doors.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DoorData/doors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/switches.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DoorData/switches.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/Room3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/Room4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/Room5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Red.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,9 +92,9 @@
         <option value="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/DoorData/doors.json" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/switches.json" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/DoorData/doors.json" />
       </list>
     </option>
   </component>
@@ -170,7 +159,7 @@
       <workItem from="1612014670090" duration="624000" />
       <workItem from="1612015453709" duration="8201000" />
       <workItem from="1612063455689" duration="7702000" />
-      <workItem from="1612076121876" duration="5258000" />
+      <workItem from="1612076121876" duration="5579000" />
     </task>
     <servers />
   </component>
@@ -203,9 +192,9 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="273" y="216" width="882" height="490" key="find.popup/0.23.1440.821@0.23.1440.821" timestamp="1611832193513" />
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1612085177518">
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1612087988335">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1612085177518" />
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1612087988335" />
   </component>
 </project>
