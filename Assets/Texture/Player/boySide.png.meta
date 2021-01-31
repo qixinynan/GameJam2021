@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: -2537575605629715662
     second: man3_7
+  - first:
+      213: 8398161303900691766
+    second: boySide_0
+  - first:
+      213: 432223092050314471
+    second: boySide_1
+  - first:
+      213: -3941669452780360613
+    second: boySide_2
+  - first:
+      213: 3906025958299166360
+    second: boySide_3
+  - first:
+      213: 497779357226826301
+    second: boySide_4
+  - first:
+      213: -8188763774941008897
+    second: boySide_5
+  - first:
+      213: -8351970557254900908
+    second: boySide_6
+  - first:
+      213: 2433663534744304219
+    second: boySide_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: man3_0
+      name: boySide_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475beeb87ab80c520800000000000000
-      internalID: 2720327726655255924
+      spriteID: 63d9e65e5334c8470800000000000000
+      internalID: 8398161303900691766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man3_1
+      name: boySide_1
       rect:
         serializedVersion: 2
         x: 36
@@ -158,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5cdc3b4d5d5003e0800000000000000
-      internalID: -2089567571824288673
+      spriteID: 7e44169bc909ff500800000000000000
+      internalID: 432223092050314471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man3_2
+      name: boySide_2
       rect:
         serializedVersion: 2
         x: 72
@@ -179,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d278c31788c1fd280800000000000000
-      internalID: -9016456556631521491
+      spriteID: b5ca40d34806c49c0800000000000000
+      internalID: -3941669452780360613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man3_3
+      name: boySide_3
       rect:
         serializedVersion: 2
         x: 108
@@ -200,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0789495fcc42c3f0800000000000000
-      internalID: -882058123571263730
+      spriteID: 89660eff9edf43630800000000000000
+      internalID: 3906025958299166360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man3_4
+      name: boySide_4
       rect:
         serializedVersion: 2
         x: 144
@@ -221,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de539f0dd0c94b170800000000000000
-      internalID: 8193345205248275949
+      spriteID: d3af60420b778e600800000000000000
+      internalID: 497779357226826301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man3_5
+      name: boySide_5
       rect:
         serializedVersion: 2
         x: 180
@@ -242,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c140276dd4b3bc090800000000000000
-      internalID: -8013245906479348708
+      spriteID: ffbed0d8bbaab5e80800000000000000
+      internalID: -8188763774941008897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man3_6
+      name: boySide_6
       rect:
         serializedVersion: 2
         x: 216
@@ -263,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea9557f5565396d70800000000000000
-      internalID: 9036812836805106094
+      spriteID: 453ec406707d71c80800000000000000
+      internalID: -8351970557254900908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: man3_7
+      name: boySide_7
       rect:
         serializedVersion: 2
         x: 252
@@ -284,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23b7ebb6e68b8ccd0800000000000000
-      internalID: -2537575605629715662
+      spriteID: b5a714b371c16c120800000000000000
+      internalID: 2433663534744304219
       vertices: []
       indices: 
       edges: []
