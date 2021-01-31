@@ -134,4 +134,14 @@ public class PlayerTouch : MonoBehaviour
         GameController.manager.disableInput = false;
         GetComponent<Animator>().SetInteger("dir", 0);
     }
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag(Util.TagCollection.player))
+        {
+            GameController.manager.disableInput = true;
+            GameController.manager.disableSpace = true;
+            GameController.manager.screenFader.ScreenToBlack();
+        }
+    }
 }
