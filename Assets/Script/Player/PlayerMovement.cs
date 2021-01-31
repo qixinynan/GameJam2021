@@ -9,7 +9,7 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    private float speed = 5;
     public static PlayerMovement instance;
     //private bool isMoving = false;
     //private bool isControllA = true;
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (player == null){
         
-            Debug.LogError("Player is Null");
+            //Debug.LogError("Player is Null");
             return;
         }
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();

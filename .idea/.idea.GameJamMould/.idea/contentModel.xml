@@ -59,10 +59,11 @@
         </e>
         <e p="Script" t="Include">
           <e p="Item" t="Include">
-            <e p="ControlDoorItem.cs" t="Include" />
+            <e p="DoorItem.cs" t="Include" />
+            <e p="EnterItem.cs" t="Include" />
             <e p="FXPlayerItem.cs" t="Include" />
-            <e p="NormalDoorItem.cs" t="Include" />
             <e p="StopPos.cs" t="Include" />
+            <e p="SwitchItem.cs" t="Include" />
           </e>
           <e p="Manager" t="Include">
             <e p="DoorMan.cs" t="Include" />

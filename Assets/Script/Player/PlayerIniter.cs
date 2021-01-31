@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
@@ -9,11 +10,18 @@ public class PlayerIniter : MonoBehaviour
     public GameObject boyPrefab;
     public GameObject girlPrefab;
     public GameObject bossPrefab;
+
+    public static PlayerIniter instance;
+    
     public int roomId;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private IEnumerator Start()
     {
-        Debug.Log("????????????????????????");
         yield return new WaitUntil(() =>
         {
             return GameController.manager != null;
@@ -66,31 +74,37 @@ public class PlayerIniter : MonoBehaviour
             GameObject boss = Instantiate(bossPrefab);
             bossPrefab.transform.position = GameController.manager.bossPos;
         }
-        
+
+        if (!GameController.manager.isControllBoy)
+        {
+            GameController.manager.player.GetComponent<Animator>().SetInteger("dir",0);
+            GameController.manager.player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
+
     }
 
     private bool FindStartPos(out Vector3 pos)
     {
-        ControlDoorItem[] controlItems = FindObjectsOfType<ControlDoorItem>();
-        NormalDoorItem[] normalItems = FindObjectsOfType<NormalDoorItem>();
-        bool find = false;
-        for (int i = 0; i < controlItems.Length; i++)
+        DoorItem[] doorItems = FindObjectsOfType<DoorItem>();
+        for (int i = 0; i < doorItems.Length; i++)
         {
-            if (controlItems[i].id == GameController.manager.enterDoorId)
+            if (doorItems[i].id == GameController.manager.enterDoorId)
             {
-                pos = controlItems[i].showPosTrans.position;
+                pos = doorItems[i].showPosTrans.position;
                 return true;
             }
         }
-        for (int i = 0; i < normalItems.Length; i++)
+        
+        EnterItem[] enterItems = FindObjectsOfType<EnterItem>();
+        for (int i = 0; i < enterItems.Length; i++)
         {
-            if (normalItems[i].id == GameController.manager.enterDoorId)
+            if (enterItems[i].id == GameController.manager.enterDoorId)
             {
-                pos = controlItems[i].showPosTrans.position;
+                pos = enterItems[i].showPosTrans.position;
                 return true;
             }
         }
-
+        
         pos = Vector3.zero;
         return false;
     }

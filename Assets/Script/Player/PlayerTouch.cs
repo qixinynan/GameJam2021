@@ -3,115 +3,84 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TouchingType
+{
+    None = 0,
+    Door,
+    Switch,
+    Enter
+}
+
 public class PlayerTouch : MonoBehaviour
 {
-    private bool isTouchDoor = false;
-    private GameObject selectDoorItem;
-
+    private TouchingType touchingType = TouchingType.None;
+    private GameObject selectItem;
+    public bool isBoy;
+ 
     private void Update()
     {
-        if (isTouchDoor && selectDoorItem != null)
+        if (GameController.manager.disableInput)
         {
-            if (selectDoorItem.GetComponent<ControlDoorItem>() != null)
+            return;
+        }
+
+        if (GameController.manager.isControllBoy != isBoy)
+        {
+            return;
+        }
+        if (selectItem != null)
+        {
+            if (touchingType == TouchingType.Door)
             {
-                if (Input.GetKeyDown(KeyCode.Tab))
+                if (Input.GetKeyDown(KeyCode.E) && selectItem.GetComponent<DoorItem>().CanEnter() )
                 {
-                    selectDoorItem.GetComponent<ControlDoorItem>().SwitchType();
-                }  else if (Input.GetKeyDown(KeyCode.E) && selectDoorItem.GetComponent<ControlDoorItem>().CanEnter())
-                {
-                    // judge and enter next room 
-                    Debug.Log("Enter next room");
-                    GameController.manager.LoadLevel(selectDoorItem.GetComponent<ControlDoorItem>().GetDestScene(),
+                    Debug.Log("11111111111111111");
+                    GameController.manager.LoadLevel(selectItem.GetComponent<DoorItem>().GetDestScene(PlayerIniter.instance.roomId),
                         () =>
                         {
                             // TODO
                             Debug.Log("Change Scene");
-                            GameController.manager.enterDoorId =
-                                selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId;
+                            GameController.manager.enterDoorId = selectItem.GetComponent<DoorItem>().GetInfo().id;
+                            int rid = selectItem.GetComponent<DoorItem>().GetInfo().GetDestRoomId(PlayerIniter.instance.roomId);
                             if (GameController.manager.isControllBoy)
                             {
-                                GameController.manager.boyRoomId =
-                                    selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().toRoomId;
+                                GameController.manager.boyRoomId = rid;
                             }
                             else
                             {
-                                GameController.manager.girlRoomId =
-                                    selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().toRoomId;
-                            }
-                        }, () =>
-                        {
-                            Vector3 pos = Vector3.zero;
-                            ControlDoorItem[] controlItems = FindObjectsOfType<ControlDoorItem>();
-                            NormalDoorItem[] normalItems = FindObjectsOfType<NormalDoorItem>();
-                            bool find = false;
-                            for (int i = 0; i < controlItems.Length; i++)
-                            {
-                                if (controlItems[i].id == selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId)
-                                {
-                                    GameController.manager.player.transform.position =
-                                        controlItems[i].showPosTrans.position;
-                                    return;
-                                }
-                            }
-                            for (int i = 0; i < normalItems.Length; i++)
-                            {
-                                if (normalItems[i].id == selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId)
-                                {
-                                    GameController.manager.player.transform.position =
-                                        controlItems[i].showPosTrans.position;
-                                    return;
-                                }
+                                GameController.manager.girlRoomId = rid;
                             }
                         });
                 }
-            }
-            else if (selectDoorItem.GetComponent<NormalDoorItem>() != null &&
-                     selectDoorItem.GetComponent<NormalDoorItem>().CanEnter() && Input.GetKeyDown(KeyCode.E))
+            } else if (touchingType == TouchingType.Switch)
             {
-                // judge and enter next room 
-                Debug.Log("Enter next room");
-                GameController.manager.LoadLevel(selectDoorItem.GetComponent<NormalDoorItem>().GetDestScene(),
-                    () =>
-                    {
-                        // TODO
-                        Debug.Log("Change Scene");
-                        GameController.manager.enterDoorId =
-                            selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().backDoorId;
-                        if (GameController.manager.isControllBoy)
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    selectItem.GetComponent<SwitchItem>().SwitchType();
+                }
+            } else if (touchingType == TouchingType.Enter)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    GameController.manager.LoadLevel(
+                        selectItem.GetComponent<EnterItem>().GetDestScene(PlayerIniter.instance.roomId),
+                        () =>
                         {
-                            GameController.manager.boyRoomId =
-                                selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().toRoomId;
-                        }
-                        else
-                        {
-                            GameController.manager.girlRoomId =
-                                selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().toRoomId;
-                        }
-                    }, () =>
-                    {
-                        Vector3 pos = Vector3.zero;
-                        ControlDoorItem[] controlItems = FindObjectsOfType<ControlDoorItem>();
-                        NormalDoorItem[] normalItems = FindObjectsOfType<NormalDoorItem>();
-                        bool find = false;
-                        for (int i = 0; i < controlItems.Length; i++)
-                        {
-                            if (controlItems[i].id == selectDoorItem.GetComponent<NormalDoorItem>().GetInfo().backDoorId)
+                            // TODO
+                            Debug.Log("Change Scene");
+                            GameController.manager.enterDoorId = selectItem.GetComponent<EnterItem>().GetInfo().id;
+                            int rid = selectItem.GetComponent<EnterItem>().GetInfo()
+                                .GetDestRoomId(PlayerIniter.instance.roomId);
+                            if (GameController.manager.isControllBoy)
                             {
-                                GameController.manager.player.transform.position =
-                                    controlItems[i].showPosTrans.position;
-                                return;
+                                GameController.manager.boyRoomId = rid;
                             }
-                        }
-                        for (int i = 0; i < normalItems.Length; i++)
-                        {
-                            if (normalItems[i].id == selectDoorItem.GetComponent<ControlDoorItem>().GetInfo().backDoorId)
+                            else
                             {
-                                GameController.manager.player.transform.position =
-                                    controlItems[i].showPosTrans.position;
-                                return;
+                                GameController.manager.girlRoomId = rid;
                             }
-                        }
-                    });
+                        });
+                }
             }
         }
     }
@@ -120,19 +89,31 @@ public class PlayerTouch : MonoBehaviour
     {
         if (other.gameObject.CompareTag(Util.TagCollection.door))
         {
-            selectDoorItem = other.gameObject;
-            isTouchDoor = true;
-            Debug.Log("交互门");
-        }
+            selectItem = other.gameObject;
+            touchingType  = TouchingType.Door;
+            Debug.Log("交互 门");
+        } else if (other.gameObject.CompareTag(Util.TagCollection.switches))
+        {
+            selectItem = other.gameObject;
+            touchingType  = TouchingType.Switch;
+            Debug.Log("交互 开关");
+        }  else if (other.gameObject.CompareTag(Util.TagCollection.enter))
+        {
+            selectItem = other.gameObject;
+            touchingType  = TouchingType.Enter;
+            Debug.Log("交互 出口");
+        } 
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag(Util.TagCollection.door))
+        if (other.gameObject.CompareTag(Util.TagCollection.door) 
+            || other.gameObject.CompareTag(Util.TagCollection.switches)
+            || other.gameObject.CompareTag(Util.TagCollection.enter))
         {
-            selectDoorItem = null;
-            isTouchDoor = false;
-            Debug.Log("取消交互门");
+            selectItem = null;
+            touchingType = TouchingType.None;
+            Debug.Log("取消交互");
         }
     }
 }

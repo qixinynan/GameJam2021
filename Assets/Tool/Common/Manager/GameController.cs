@@ -32,6 +32,11 @@ public class GameController : MonoBehaviour
     public int bossRoomId = 1;
 
     public int enterDoorId = -1;
+    
+    private float timer = 0;
+    private float maxTimer = 1.0f;
+
+
 
     private void Awake()
     {
@@ -58,15 +63,18 @@ public class GameController : MonoBehaviour
         if (disableInput)
         {
             return;
-            ;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        timer += Time.deltaTime;
+        
+        if (Input.GetKeyDown(KeyCode.Space) && timer >=  maxTimer)
         {
+            timer = 0;
             ChangeRole(); 
         }
     }
 
-    public void LoadLevel(int level, Util.NoParmsCallBack changeLevel = null, Util.NoParmsCallBack sameLevel = null)
+    public void LoadLevel(int level, Util.NoParmsCallBack changeLevel = null)
     {
         GameController.manager.disableInput = true;
         screenFader.ScreenToBlack(() =>
@@ -75,19 +83,11 @@ public class GameController : MonoBehaviour
             {
                 // set GameController Pos
                 Debug.Log(level);
-                Debug.Log("-=-=-=-=-=-=-=-=--=-=");
                 if (changeLevel != null)
                 {
                     changeLevel();
                 }
-                Debug.Log("sssssssssssssssssssssss");
                 SceneManager.LoadScene(level);
-            }
-            else
-            {
-                // set CurrentPos
-                Debug.Log("2321312321312312312");
-                sameLevel?.Invoke();
             }
             screenFader.ScreenToClear(() =>
             {
@@ -119,13 +119,19 @@ public class GameController : MonoBehaviour
                 // girl sleep
                 girl.GetComponent<Animator>().SetInteger("dir", -1);
                 girl.GetComponent<Animator>().SetTrigger("sleep");
+                girl.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                boy.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
             else
             {
                 // boy sleep
                 boy.GetComponent<Animator>().SetInteger("dir", -1);
                 boy.GetComponent<Animator>().SetTrigger("sleep");
+                boy.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                girl.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
+
+            //StartCoroutine(ResetInput());
         }
         else if(Util.roomToSceneDict.ContainsKey(id))
         {
@@ -148,4 +154,10 @@ public class GameController : MonoBehaviour
             Debug.LogError("Error room id : " + id);
         }
     }
+
+    // private IEnumerator ResetInput()
+    // {
+    //     yield return new WaitForSeconds(3.0f);
+    //     GameController.manager.disableInput = false;
+    // }
 }

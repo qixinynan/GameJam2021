@@ -6,6 +6,8 @@ TagManager:
   tags:
   - StopPos
   - Door
+  - Switches
+  - Enter
   layers:
   - Default
   - TransparentFX
