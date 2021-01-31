@@ -116,4 +116,10 @@ public class PlayerTouch : MonoBehaviour
             Debug.Log("取消交互");
         }
     }
+
+    public void ResetInput()
+    {
+        GameController.manager.disableInput = false;
+        GetComponent<Animator>().SetInteger("dir", 0);
+    }
 }

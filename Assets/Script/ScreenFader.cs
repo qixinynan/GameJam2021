@@ -49,6 +49,7 @@ public class ScreenFader : MonoBehaviour
         rawImage.color = Color.Lerp(rawImage.color, Color.black, floatColorChangeSpeed * Time.deltaTime);
     }
 
+    private Tween t;
     /// <summary>
     /// 屏幕的淡入
     /// </summary>
@@ -56,12 +57,21 @@ public class ScreenFader : MonoBehaviour
     {
         if (isAnimanating)
         {
+            Debug.Log("b1");
             return;
         }
         isAnimanating = true;
-        Tween t = DOTween.To(() => rawImage.color, x => rawImage.color = x, Color.clear, floatColorChangeSpeed);
+        if (t != null)
+        {
+            Debug.Log("b2");
+            t.Pause();
+            t = null;
+        }
+        Debug.Log("b3");
+        t = DOTween.To(() => rawImage.color, x => rawImage.color = x, Color.clear, floatColorChangeSpeed);
         t.OnComplete(() =>
         {
+            Debug.Log("b4");
             //设置为完全透明
             rawImage.color = Color.clear;
             //组件的开关设置为关闭的状态
@@ -81,7 +91,7 @@ public class ScreenFader : MonoBehaviour
         //     isBlack = false;
         // }
     }
-
+    
     /// <summary>
     /// 屏幕的淡出
     /// </summary>
@@ -89,13 +99,22 @@ public class ScreenFader : MonoBehaviour
     {
         if (isAnimanating)
         {
+            Debug.Log("a1");
             return;
         }
         isAnimanating = true;
+        if (t != null)
+        {
+            Debug.Log("a2");
+            t.Pause();
+            t = null;
+        }
+        Debug.Log("a3");
         rawImage.enabled = true;
-        Tween t = DOTween.To(() => rawImage.color, x => rawImage.color = x, Color.black, floatColorChangeSpeed);
+        t = DOTween.To(() => rawImage.color, x => rawImage.color = x, Color.black, floatColorChangeSpeed);
         t.OnComplete(() =>
         {
+            Debug.Log("a4");
             rawImage.color = Color.black;
             isBlack = true;
             isAnimanating = false;

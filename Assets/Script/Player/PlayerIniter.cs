@@ -35,6 +35,7 @@ public class PlayerIniter : MonoBehaviour
         Vector3 startPos = Vector3.zero;
         if (GameController.manager.enterDoorId != -999 && FindStartPos(out startPos))
         {
+            GameController.manager.enterDoorId = -999;
             if (GameController.manager.isControllBoy)
             {
                 GameController.manager.boyPos = startPos;
@@ -79,8 +80,17 @@ public class PlayerIniter : MonoBehaviour
         {
             GameController.manager.player.GetComponent<Animator>().SetInteger("dir",0);
             GameController.manager.player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            if (GameController.manager.boy != null)
+            {
+                GameController.manager.boy.GetComponent<Animator>().SetInteger("dir", -1);
+                GameController.manager.boy.GetComponent<Animator>().SetTrigger("sleep");
+            }
         }
 
+        if (roomId == 1)
+        {
+            GameController.manager.disableSpace = false;
+        }
     }
 
     private bool FindStartPos(out Vector3 pos)

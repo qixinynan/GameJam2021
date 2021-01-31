@@ -566,6 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableInput: 0
+  disableSpace: 1
   isGameOver: 0
   player: {fileID: 0}
   boy: {fileID: 0}
@@ -1346,6 +1347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   showPosTrans: {fileID: 164997209}
+  sr: {fileID: 0}
+  spList: []
 --- !u!50 &1346236427
 Rigidbody2D:
   serializedVersion: 4
@@ -1642,7 +1645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734478898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.69, y: -0.19, z: -5}
+  m_LocalPosition: {x: 4.69, y: -0.19, z: 0}
   m_LocalScale: {x: -4, y: 4, z: 4}
   m_Children:
   - {fileID: 1346236425}
@@ -2218,7 +2221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5699704855861294194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.521, y: 1.95, z: -5}
+  m_LocalPosition: {x: -0.521, y: 1.95, z: 0}
   m_LocalScale: {x: -4, y: 4, z: 4}
   m_Children:
   - {fileID: 3606935025253586862}
@@ -2354,6 +2357,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   showPosTrans: {fileID: 4580483033599872897}
+  sr: {fileID: 7064918488339169435}
+  spList:
+  - {fileID: 21300000, guid: 3ba8046cb13ea439db90ee950f614273, type: 3}
+  - {fileID: 21300000, guid: 4ef5f293a61ea407a89089a803b890ac, type: 3}
+  - {fileID: 21300000, guid: 6d65a2b4b335b47f599e2070af6468fc, type: 3}
 --- !u!1 &9191544936077086366
 GameObject:
   m_ObjectHideFlags: 0

@@ -358,7 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13f70bdc8de74106be535150e0bfd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
 --- !u!4 &331015746
 Transform:
   m_ObjectHideFlags: 0
@@ -503,6 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableInput: 0
+  disableSpace: 1
   isGameOver: 0
   player: {fileID: 0}
   boy: {fileID: 0}
@@ -1899,6 +1899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   showPosTrans: {fileID: 1545468423}
+  sr: {fileID: 0}
+  spList: []
 --- !u!50 &1834607811
 Rigidbody2D:
   serializedVersion: 4
@@ -2131,7 +2133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8669238, y: 0.33824098}
+  m_Size: {x: 0.3494444, y: 0.33824098}
   m_EdgeRadius: 0
 --- !u!4 &6515403068423593362
 Transform:

@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     public DoorMan doorMan = new DoorMan();
 
     public bool disableInput = false;
+    public bool disableSpace = true;
+    
     public bool isGameOver = false;
     public GameObject player;
     public GameObject boy;
@@ -66,16 +68,17 @@ public class GameController : MonoBehaviour
         }
 
         timer += Time.deltaTime;
-        
-        if (Input.GetKeyDown(KeyCode.Space) && timer >=  maxTimer)
+
+        if (Input.GetKeyDown(KeyCode.Space) && timer >= maxTimer && !GameController.manager.disableSpace)
         {
             timer = 0;
-            ChangeRole(); 
+            ChangeRole();
         }
     }
 
     public void LoadLevel(int level, Util.NoParmsCallBack changeLevel = null)
     {
+        Debug.Log("LoadLevel.......");
         GameController.manager.disableInput = true;
         screenFader.ScreenToBlack(() =>
         {
@@ -98,15 +101,18 @@ public class GameController : MonoBehaviour
 
     public void ChangeRole()
     {
+        GameController.manager.disableInput = true;
         if (isControllBoy)
         {
             boy.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             PlayerMovement.instance.UpdateMove(boy, 0, 0);
+            boyPos = GameController.manager.boy.transform.position;
         }
         else
         {
             girl.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             PlayerMovement.instance.UpdateMove(girl, 0, 0);
+            girlPos = GameController.manager.girl.transform.position;
         }
         isControllBoy = !isControllBoy;
         player = isControllBoy ? boy : girl;
@@ -119,6 +125,7 @@ public class GameController : MonoBehaviour
                 // girl sleep
                 girl.GetComponent<Animator>().SetInteger("dir", -1);
                 girl.GetComponent<Animator>().SetTrigger("sleep");
+                boy.GetComponent<Animator>().SetInteger("dir", 0);
                 girl.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
                 boy.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
@@ -127,6 +134,7 @@ public class GameController : MonoBehaviour
                 // boy sleep
                 boy.GetComponent<Animator>().SetInteger("dir", -1);
                 boy.GetComponent<Animator>().SetTrigger("sleep");
+                girl.GetComponent<Animator>().SetInteger("dir", 0);
                 boy.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
                 girl.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
@@ -147,6 +155,7 @@ public class GameController : MonoBehaviour
                 boy.GetComponent<Animator>().SetInteger("dir", -1);
                 boy.GetComponent<Animator>().SetTrigger("sleep");
             }
+            Debug.Log("000000000000000");
             LoadLevel(Util.roomToSceneDict[id]);
         }
         else

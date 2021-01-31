@@ -22,9 +22,9 @@ public class SwitchItem : MonoBehaviour
             {
                 return;
             }
-
             Debug.Log(info.colorType);
             sr.sprite = spList[(int) info.colorType];
+            sr.transform.localPosition = new Vector3(sr.transform.localPosition.x, sr.transform.localPosition.y, -2.0f);
         }));
     }
 
