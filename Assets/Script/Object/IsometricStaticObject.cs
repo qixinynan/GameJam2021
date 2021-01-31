@@ -17,12 +17,12 @@ public class IsometricStaticObject : MonoBehaviour {
     }
 
     // Use this condition for objects that don’t move in the scene.
-#if UNITY_EDITOR
+
     void LateUpdate()
     {
         // Use this condition for objects that don’t move in the scene.
-        if (!Application.isPlaying)
-        {
+        
+        
             // Update the position in the Z axis:
             transform.position = new Vector3
             (
@@ -30,9 +30,9 @@ public class IsometricStaticObject : MonoBehaviour {
                 transform.position.y,
                 (transform.position.y - m_spriteLowerBound + m_floorHeight) * m_tan30
             );
-        }
+        
     }
-#endif
+
 
     void OnDrawGizmos()
     {
