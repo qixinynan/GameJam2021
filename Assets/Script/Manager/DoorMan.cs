@@ -1,134 +1,169 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using LitJson;
+using NUnit.Framework;
+using Debug = UnityEngine.Debug;
 
-public enum DoorColorType
+public enum ColorType
 {
     Red = 0,
     Green,
     Blue
 }
 
-public enum DoorType
-{
-    Normal = 0,
-    Control
-}
 
-public class ControlDoorInfo
+public class DoorInfo
 {
     public int id;
-    public int backDoorId;
-    public DoorColorType colorType;
-    public int toRoomId;
-    
-
-    public void SwitchType()
-    {
-        int t = ((int)colorType + 1) % 3;
-        colorType = (DoorColorType) t;
-        Debug.Log("current type is :  " + colorType);
-    }
+    public int switchId;
+    public ColorType colorType;
+    public List<int> roomList = new List<int>();
 
     public bool CanEnter()
     {
         bool sameControl = false;
-        ControlDoorInfo controlInfo = GameController.manager.doorMan.GetControlInfoById(backDoorId);
-        if (controlInfo == null)
-        {
-            sameControl = false;
-        }
-        else
-        {
-            sameControl = controlInfo.colorType == colorType;
-        }
-
-        bool sameNormal = false;
-        NormalDoorInfo normalInfo = GameController.manager.doorMan.GetNormalInfoById(backDoorId);
-        if (normalInfo == null)
-        {
-            sameNormal = false;
-        }
-        else
-        {
-            sameNormal = normalInfo.colorType == colorType;
-        }
-
-        return sameControl || sameNormal;
-    }
-}
-
-public class NormalDoorInfo
-{
-    public int id;
-    public int backDoorId;
-    public int parentId;
-    public DoorColorType colorType;
-    public int toRoomId;
-
-    public bool CanEnter()
-    {
-        ControlDoorInfo info = GameController.manager.doorMan.GetControlInfoById(parentId);
-        //Debug.Log(info.colorType +  " ---- " +  colorType);
-        if (info == null)
+        SwitchInfo switchInfo = GameController.manager.doorMan.GetSwitchInfoById(switchId);
+        if (switchInfo == null)
         {
             return false;
         }
 
-        return info.colorType == colorType;
+        return switchInfo.colorType == colorType;
     }
     
+    public int GetDestRoomId(int roomId)
+    {
+        Debug.Log(roomId + "-------");
+        int des = 0;
+        for (int i = 0; i < roomList.Count; i++)
+        {
+            if (roomList[i] != roomId)
+            {
+                des = i;
+                Debug.Log("Find !!!!!");
+                break;
+            }
+        }
+
+        return roomList[des];
+    }
+}
+
+public class SwitchInfo
+{
+    public int id;
+    public ColorType colorType;
+
+    public void SwitchType()
+    {
+        int t = (int) colorType + 1;
+        t %= 3;
+        colorType = (ColorType) t;
+        Debug.Log("current type is : " + colorType);
+    }
+}
+
+public class EnterInfo
+{
+    public int id;
+    public List<int> roomList = new List<int>();
+
+    public int GetDestRoomId(int roomId)
+    {
+        Debug.Log(roomId + "-------");
+        int des = 0;
+        for (int i = 0; i < roomList.Count; i++)
+        {
+            if (roomList[i] != roomId)
+            {
+                des = i;
+                Debug.Log("Find !!!!!");
+                break;
+            }
+        }
+
+        return roomList[des];
+    }
 }
 
 public class DoorMan
 {
-    public Dictionary<int, ControlDoorInfo> controlDoorDict = new Dictionary<int, ControlDoorInfo>();
-    public Dictionary<int, NormalDoorInfo> normalDoorDict = new Dictionary<int, NormalDoorInfo>();
+    public Dictionary<int, DoorInfo> doorInfoDict = new Dictionary<int, DoorInfo>();
+    public Dictionary<int, SwitchInfo> switchInfoDict = new Dictionary<int, SwitchInfo>();
+    public Dictionary<int, EnterInfo> enterInfoDict = new Dictionary<int, EnterInfo>();
 
+    public bool initFinish = false;
     public void ParseDoorInfos()
     {
-        JsonData controlData = JsonMapper.ToObject(Resources.Load<TextAsset>("DoorData/controlDoors").text);
+        JsonData controlData = JsonMapper.ToObject(Resources.Load<TextAsset>("DoorData/doors").text);
         foreach (JsonData item in controlData)
         {
-            ControlDoorInfo controlDoorInfo = new ControlDoorInfo();
-            controlDoorInfo.id = (int) item["id"];
-            controlDoorInfo.backDoorId = (int) item["backId"];
-            controlDoorInfo.colorType = (DoorColorType) (int) item["type"];
-            controlDoorInfo.toRoomId = (int) item["toRoomId"];
-            controlDoorDict[controlDoorInfo.id] = controlDoorInfo;
+            DoorInfo doorInfo = new DoorInfo();
+            doorInfo.id = (int) item["id"];
+            doorInfo.switchId = (int) item["switchId"];
+            doorInfo.colorType = (ColorType) (int) item["type"];
+            JsonData dt = item["rooms"];
+            for (int i = 0; i < dt.Count; i++)
+            {
+                doorInfo.roomList.Add((int) dt[i]);
+            }
+            doorInfoDict[doorInfo.id] = doorInfo;
         }
 
-        JsonData normalData = JsonMapper.ToObject(Resources.Load<TextAsset>("DoorData/normalDoors").text);
+        JsonData normalData = JsonMapper.ToObject(Resources.Load<TextAsset>("DoorData/switches").text);
         foreach (JsonData item in normalData)
         {
-            NormalDoorInfo normalDoorInfo = new NormalDoorInfo();
-            normalDoorInfo.id = (int) item["id"];
-            normalDoorInfo.backDoorId = (int) item["backId"];
-            normalDoorInfo.parentId = (int) item["parentId"];
-            normalDoorInfo.colorType = (DoorColorType) (int) item["type"];
-            normalDoorInfo.toRoomId = (int) item["toRoomId"];
-            normalDoorDict[normalDoorInfo.id] = normalDoorInfo;
+            SwitchInfo switchInfo = new SwitchInfo();
+            switchInfo.id = (int) item["id"];
+            switchInfo.colorType = (ColorType) (int) item["type"];
+            switchInfoDict[switchInfo.id] = switchInfo;
         }
+        
+        JsonData enterData = JsonMapper.ToObject(Resources.Load<TextAsset>("DoorData/enters").text);
+        foreach (JsonData item in enterData)
+        {
+            EnterInfo enterInfo = new EnterInfo();
+            enterInfo.id = (int) item["id"];
+            JsonData dt = item["rooms"];
+            for (int i = 0; i < dt.Count; i++)
+            {
+                enterInfo.roomList.Add((int) dt[i]);
+            }
+            enterInfoDict[enterInfo.id] = enterInfo;
+        }
+
+        initFinish = true;
     }
 
-    public ControlDoorInfo GetControlInfoById(int id)
+    public DoorInfo GetDoorInfoById(int id)
     {
-        if (!controlDoorDict.ContainsKey(id))
+        if (!doorInfoDict.ContainsKey(id))
         {
             return null;
         }
 
-        return controlDoorDict[id];
+        return doorInfoDict[id];
     }
 
-    public NormalDoorInfo GetNormalInfoById(int id)
+    public SwitchInfo GetSwitchInfoById(int id)
     {
-        if (!normalDoorDict.ContainsKey(id))
+        if (!switchInfoDict.ContainsKey(id))
         {
             return null;
         }
 
-        return normalDoorDict[id];
+        return switchInfoDict[id];
+    }
+    
+    public EnterInfo GetEnterInfoById(int id)
+    {
+        if (!enterInfoDict.ContainsKey(id))
+        {
+            return null;
+        }
+
+        return enterInfoDict[id];
     }
 }

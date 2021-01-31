@@ -19,9 +19,9 @@ public static class Util
     {
         {ObjectItemNameCollection.demo, 10}
     };
-
-    #warning  .......... -1
-    public static Dictionary<int, int> roomToSceneDict = new Dictionary<int, int> {{-1, 3},{0, 0},{1, 1}};
+    
+    public static Dictionary<int, int> roomToSceneDict = new Dictionary<int, int>
+        {{-1, 6}, {0, 0}, {1, 1}, {2, 2}, {3, 3}, {4, 4}, {5, 5}};
 
     //type
     public delegate void NoParmsCallBack();
@@ -37,6 +37,8 @@ public static class Util
         public static string player = "Player";
         public static string stopPos = "StopPos";
         public static string door = "Door";
+        public static string switches = "Switches";
+        public static string enter = "Enter";
     }
 
     // function

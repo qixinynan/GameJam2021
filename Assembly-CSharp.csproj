@@ -75,10 +75,11 @@
      <Compile Include="Assets\Navigation2D\Plugins\NavMeshUtils2D.cs" />
      <Compile Include="Assets\Navigation2D\TestScene\Move.cs" />
      <Compile Include="Assets\Navigation2D\TestScene\MoveUpDown.cs" />
-     <Compile Include="Assets\Script\Item\ControlDoorItem.cs" />
+     <Compile Include="Assets\Script\Item\DoorItem.cs" />
+     <Compile Include="Assets\Script\Item\EnterItem.cs" />
      <Compile Include="Assets\Script\Item\FXPlayerItem.cs" />
-     <Compile Include="Assets\Script\Item\NormalDoorItem.cs" />
      <Compile Include="Assets\Script\Item\StopPos.cs" />
+     <Compile Include="Assets\Script\Item\SwitchItem.cs" />
      <Compile Include="Assets\Script\Manager\DoorMan.cs" />
      <Compile Include="Assets\Script\Object\IsometricStaticObject.cs" />
      <Compile Include="Assets\Script\Player\BossMovement.cs" />
