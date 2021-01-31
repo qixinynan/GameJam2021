@@ -76,16 +76,23 @@ public class PlayerIniter : MonoBehaviour
             bossPrefab.transform.position = GameController.manager.bossPos;
         }
 
-        if (!GameController.manager.isControllBoy)
-        {
-            GameController.manager.player.GetComponent<Animator>().SetInteger("dir",0);
-            GameController.manager.player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            if (GameController.manager.boy != null)
+        // if (!GameController.manager.isControllBoy)
+        // {
+            
+            
+            if (!GameController.manager.isControllBoy && GameController.manager.boy != null)
             {
                 GameController.manager.boy.GetComponent<Animator>().SetInteger("dir", -1);
                 GameController.manager.boy.GetComponent<Animator>().SetTrigger("sleep");
             }
-        }
+            if (GameController.manager.isControllBoy && GameController.manager.girl != null)
+            {
+                GameController.manager.girl.GetComponent<Animator>().SetInteger("dir", -1);
+                GameController.manager.girl.GetComponent<Animator>().SetTrigger("sleep");
+            }
+        // }
+        GameController.manager.player.GetComponent<Animator>().SetInteger("dir",0);
+        GameController.manager.player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
         if (roomId == 1)
         {

@@ -9,7 +9,7 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float speed = 5;
+    private float speed = 2.5f;
     public static PlayerMovement instance;
     //private bool isMoving = false;
     //private bool isControllA = true;

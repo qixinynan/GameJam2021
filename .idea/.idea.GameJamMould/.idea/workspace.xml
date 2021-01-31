@@ -24,21 +24,23 @@
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Boy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Boy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Girl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Girl.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Boy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Boy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/Room4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/SwitchItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/SwitchItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/boyUp.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/boyUp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/boyUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/boyUp.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Manager/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Manager/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/RoomGuide.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/RoomGuide.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Common/compBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Common/compBox.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Other/Blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Green.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Other/Green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Other/Red.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Other/Red.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/boyClick.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/boyClick.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/girlClick.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/girlClick.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,9 +95,7 @@
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/switches 1.json" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/EnterItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ScreenFader.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/doors.json" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/switches.json" />
@@ -104,6 +104,8 @@
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
       </list>
     </option>
   </component>
@@ -168,7 +170,7 @@
       <workItem from="1612014670090" duration="624000" />
       <workItem from="1612015453709" duration="8201000" />
       <workItem from="1612063455689" duration="7702000" />
-      <workItem from="1612076121876" duration="760000" />
+      <workItem from="1612076121876" duration="1506000" />
     </task>
     <servers />
   </component>
@@ -201,9 +203,9 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="273" y="216" width="882" height="490" key="find.popup/0.23.1440.821@0.23.1440.821" timestamp="1611832193513" />
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1612073241266">
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1612077239127">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1612073241266" />
+    <state x="363" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1612077239127" />
   </component>
 </project>
