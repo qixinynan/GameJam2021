@@ -21,7 +21,7 @@ public static class Util
     };
     
     public static Dictionary<int, int> roomToSceneDict = new Dictionary<int, int>
-        {{-1, 6}, {0, 0}, {1, 1}, {2, 2}, {3, 3}, {4, 4}, {5, 5}};
+        {{-1, 0}, {0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}};
 
     //type
     public delegate void NoParmsCallBack();

@@ -9,12 +9,8 @@ public class SwitchItem : MonoBehaviour
     public List<Sprite> spList;
     public SpriteRenderer sr;
 
-    private AudioSource audioSource;
-
     private void Start()
     {
-
-        AudioInit();
         StartCoroutine(Util.DelayExecute(() =>
         {
             return GameController.manager.doorMan.initFinish;
@@ -32,23 +28,6 @@ public class SwitchItem : MonoBehaviour
         }));
     }
 
-    private void AudioInit()
-    {
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            Debug.LogError("Audio Source is NULL");
-        }
-        else if(audioSource.clip == null)
-        {
-            Debug.LogError("Audio Source's Clip is Null");
-        }
-        else
-        {
-            
-        }
-    }
-
     public void SwitchType()
     {
         SwitchInfo info = GameController.manager.doorMan.GetSwitchInfoById(id);
@@ -58,7 +37,6 @@ public class SwitchItem : MonoBehaviour
         }
         info.SwitchType();
         sr.sprite = spList[(int)info.colorType];
-        audioSource.Play();
     }
     
 }

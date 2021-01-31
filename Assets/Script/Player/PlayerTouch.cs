@@ -16,6 +16,9 @@ public class PlayerTouch : MonoBehaviour
     private TouchingType touchingType = TouchingType.None;
     private GameObject selectItem;
     public bool isBoy;
+
+    public AudioSource switchAudio;
+    public AudioSource openDoorAudio;
  
     private void Update()
     {
@@ -34,7 +37,11 @@ public class PlayerTouch : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E) && selectItem.GetComponent<DoorItem>().CanEnter() )
                 {
-                    Debug.Log("11111111111111111");
+                    if (openDoorAudio != null)
+                    {
+                        openDoorAudio.Play();
+                    }
+                    //GameController.manager.player.GetComponent<Animator>().SetTrigger("click");
                     GameController.manager.LoadLevel(selectItem.GetComponent<DoorItem>().GetDestScene(PlayerIniter.instance.roomId),
                         () =>
                         {
@@ -56,7 +63,12 @@ public class PlayerTouch : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    if (switchAudio != null)
+                    {
+                        switchAudio.Play();
+                    }
                     selectItem.GetComponent<SwitchItem>().SwitchType();
+                    GameController.manager.player.GetComponent<Animator>().SetTrigger("click");
                 }
             } else if (touchingType == TouchingType.Enter)
             {
