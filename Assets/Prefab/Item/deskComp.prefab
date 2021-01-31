@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9172264724538866463}
   - component: {fileID: 8498835499947745540}
   - component: {fileID: 7983321118911794759}
+  - component: {fileID: 538406147}
   m_Layer: 0
   m_Name: deskComp
   m_TagString: Untagged
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.089883715, y: -0.12279487}
+  m_Offset: {x: 0.089883715, y: -0.19071192}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,5 +107,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8002326, y: 0.45224184}
+  m_Size: {x: 0.8002326, y: 0.31640774}
   m_EdgeRadius: 0
+--- !u!114 &538406147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084621454348437992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2549db48c85dc1419561d1ed3378585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_floorHeight: 0

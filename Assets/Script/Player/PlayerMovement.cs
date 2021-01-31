@@ -9,7 +9,8 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float speed = 2.5f;
+    private float speed = 3.5f;
+
     public static PlayerMovement instance;
     //private bool isMoving = false;
     //private bool isControllA = true;
@@ -29,21 +30,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (GameController.manager.disableInput ||  GameController.manager.isGameOver)
+        if (GameController.manager.disableInput || GameController.manager.isGameOver)
         {
             return;
         }
+
         //GameObject player = GameController.manager.isControllBoy ? GameController.manager.boy : GameController.manager.girl;
         PlayerMove(GameController.manager.player);
     }
 
     void PlayerMove(GameObject player)
     {
-        if (player == null){
-        
+        if (player == null)
+        {
+
             //Debug.LogError("Player is Null");
             return;
         }
+
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         float xMove = 0;
         float yMove = 0;
@@ -51,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             yMove = speed;
-            
+
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -66,14 +70,15 @@ public class PlayerMovement : MonoBehaviour
         {
             xMove = speed;
         }
-        if(xMove!=0 || yMove!=0) 
+
+        if (xMove != 0 || yMove != 0)
             PlayWalkingSound(player);
         else
         {
             player.GetComponent<AudioSource>().Stop();
         }
-        
-        
+
+
         rb.velocity = new Vector2(xMove, yMove);
         UpdateMove(player, xMove, yMove);
     }
@@ -91,18 +96,19 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            
+
             if (audioSource.isPlaying)
             {
-                
+
             }
             else
             {
                 audioSource.Play();
             }
-            
+
         }
     }
+
     public void UpdateMove(GameObject player, float xMove, float yMove)
     {
         if (Mathf.Approximately(xMove, 0) && Mathf.Approximately(yMove, 0))
@@ -110,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
             player.GetComponent<Animator>().SetInteger("dir", 0);
             return;
         }
+
         if (Mathf.Abs(yMove) > Mathf.Abs(xMove))
         {
             player.GetComponent<Animator>().SetInteger("dir", yMove > 0 ? 1 : 2);
@@ -117,7 +124,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             player.GetComponent<Animator>().SetInteger("dir", 3);
-            player.transform.localScale = new Vector3(Mathf.Abs(player.transform.localScale.x) * (xMove > 0 ? -1.0f: 1.0f),
+            player.transform.localScale = new Vector3(
+                Mathf.Abs(player.transform.localScale.x) * (xMove > 0 ? -1.0f : 1.0f),
                 player.transform.localScale.y
                 , player.transform.localScale.z);
         }
