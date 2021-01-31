@@ -68,6 +68,9 @@
           <e p="Manager" t="Include">
             <e p="DoorMan.cs" t="Include" />
           </e>
+          <e p="Object" t="Include">
+            <e p="IsometricStaticObject.cs" t="Include" />
+          </e>
           <e p="PlaceHolder.txt" t="Include" />
           <e p="Player" t="Include">
             <e p="BossMovement.cs" t="Include" />

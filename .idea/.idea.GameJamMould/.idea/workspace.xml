@@ -23,62 +23,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6719306-bf1b-4bdd-a9f0-4f582d06fce2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJamMould/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/FX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/FX/Main Camera Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/FX/Main Camera Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Object.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Object/IsometricStaticObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Object/IsometricStaticObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/Old Screen.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/Old Screen.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/Old Screen.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/Old Screen.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/old Screen 2.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/old Screen 2.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Texture/Scene/Old Screen 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Texture/Scene/Old Screen 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Texture/Scene/Old Screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Texture/Scene/Old Screen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Texture/Scene/Old Screen1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Texture/Scene/Old Screen1.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Boy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Boy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Girl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Girl.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/ControlDoor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/ControlDoor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/NormalDoor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Door/NormalDoor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/box3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/box3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/deskComp2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/stander.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/stander.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Boy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Boy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player/Girl.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/controlDoors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/controlDoors.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DoorData/normalDoors.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Room3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Room3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/RoomGuide.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/RoomGuide.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/ControlDoorItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/ControlDoorItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/NormalDoorItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/NormalDoorItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/computer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/computer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/desk3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/desk3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Empty 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Empty 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Common/box3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Common/box3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Common/computer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Common/computer.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Common/desk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Common/desk3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Common/map.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Common/map.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Common/robot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Common/robot.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Common/stander.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Common/stander.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Door/Control.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Door/Control.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Door/Door1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Door/Door1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Door/Door2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Door/Door2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Door/signal1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Door/signal1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Door/signal2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Door/signal2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Item/Door/signal3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Item/Door/signal3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/bossMoveDown.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/bossMoveDown.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/bossMoveSide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/bossMoveSide.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Player/bossMoveUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Player/bossMoveUp.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Scene/Scene0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Scene/Scene0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Scene/SceneGuide.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Scene/SceneGuide.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Scene/SceneGuide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Scene/SceneGuide.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Scene/图层 43 拷贝 7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Scene/图层 43 拷贝 7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,13 +104,13 @@
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Util.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/EnterItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/SwitchItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/DoorData/doors.json" />
         <option value="$PROJECT_DIR$/Assets/Script/Manager/DoorMan.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/DoorItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerTouch.cs" />
         <option value="$PROJECT_DIR$/Assets/Tool/Common/Manager/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerIniter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -206,7 +174,7 @@
       <workItem from="1611991918971" duration="6678000" />
       <workItem from="1612014670090" duration="624000" />
       <workItem from="1612015453709" duration="8201000" />
-      <workItem from="1612063455689" duration="2921000" />
+      <workItem from="1612063455689" duration="3066000" />
     </task>
     <servers />
   </component>

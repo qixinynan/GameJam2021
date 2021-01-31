@@ -94,12 +94,11 @@ public class PlayerMovement : MonoBehaviour
             
             if (audioSource.isPlaying)
             {
-                //Debug.Log("Sound is playing");    
+                
             }
             else
             {
                 audioSource.Play();
-                //Debug.Log("Sound isn't playing now");
             }
             
         }
