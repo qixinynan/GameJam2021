@@ -141,7 +141,10 @@ public class PlayerTouch : MonoBehaviour
         {
             GameController.manager.disableInput = true;
             GameController.manager.disableSpace = true;
-            GameController.manager.screenFader.ScreenToBlack();
+            GameController.manager.screenFader.ScreenToBlack(() =>
+            {
+                GameController.manager.thanksBg.SetActiveFast(true);
+            });
         }
     }
 }

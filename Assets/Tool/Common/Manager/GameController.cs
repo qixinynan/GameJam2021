@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
     public int bossRoomId = 1;
 
     public int enterDoorId = -1;
-    
+    public GameObject thanksBg;
 
 
 
