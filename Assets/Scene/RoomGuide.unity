@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -774,7 +774,6 @@ GameObject:
   - component: {fileID: 881829016}
   - component: {fileID: 881829019}
   - component: {fileID: 881829018}
-  - component: {fileID: 881829017}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -801,21 +800,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &881829017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881829015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc60d95575b99046a2d39192c972b36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rawImage: {fileID: 881829018}
-  floatColorChangeSpeed: 1
-  isBlack: 0
 --- !u!114 &881829018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +949,7 @@ MonoBehaviour:
   rawImage: {fileID: 881829018}
   floatColorChangeSpeed: 2
   isBlack: 1
+  isAnimanating: 0
 --- !u!1 &1132770404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727194483916117675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.839, y: -1.041, z: -2.8182192}
+  m_LocalPosition: {x: -2.839, y: -1.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 605179151}

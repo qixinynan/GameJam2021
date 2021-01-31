@@ -35,8 +35,6 @@ public class GameController : MonoBehaviour
 
     public int enterDoorId = -1;
     
-    private float timer = 0;
-    private float maxTimer = 1.0f;
 
 
 
@@ -66,18 +64,21 @@ public class GameController : MonoBehaviour
         {
             return;
         }
-
-        timer += Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.Space) && timer >= maxTimer && !GameController.manager.disableSpace)
+        if (screenFader.isAnimanating)
         {
-            timer = 0;
+            return;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Space) && !GameController.manager.disableSpace)
+        {
             ChangeRole();
         }
     }
 
     public void LoadLevel(int level, Util.NoParmsCallBack changeLevel = null)
     {
+        Debug.Log("-=--==--==-=-=-=-=-=-");
         Debug.Log("LoadLevel.......");
         GameController.manager.disableInput = true;
         screenFader.ScreenToBlack(() =>
